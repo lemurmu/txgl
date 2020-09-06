@@ -41,6 +41,9 @@
     <Reference Include="DevExpress.XtraBars.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v20.1" />
     <Reference Include="DevExpress.Printing.v20.1.Core" />
+    <Reference Include="DevExpress.XtraGrid.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="log4net">
       <HintPath>..\..\..\Lib\log4net.dll</HintPath>
     </Reference>
@@ -56,6 +59,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Control\OrderHistoryCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\OrderHistoryCtrl.Designer.cs">
+      <DependentUpon>OrderHistoryCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\OrderPrintCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\OrderPrintCtrl.Designer.cs">
+      <DependentUpon>OrderPrintCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmOrderPrinting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmOrderPrinting.Designer.cs">
+      <DependentUpon>FrmOrderPrinting.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmSplashScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +95,15 @@
     <Compile Include="Helper\StyleHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Control\OrderHistoryCtrl.resx">
+      <DependentUpon>OrderHistoryCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\OrderPrintCtrl.resx">
+      <DependentUpon>OrderPrintCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmOrderPrinting.resx">
+      <DependentUpon>FrmOrderPrinting.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmSplashScreen.resx">
       <DependentUpon>FrmSplashScreen.cs</DependentUpon>
     </EmbeddedResource>
@@ -110,10 +140,16 @@
       <Project>{405967ed-bf6d-4c70-8862-ea68b324e740}</Project>
       <Name>Library.Basic</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Lcs.DataAccess\Lcs.DataAccess.csproj">
+      <Project>{D140F074-0D57-4F6D-9769-A6B0B5C865A9}</Project>
+      <Name>Lcs.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lcs.Entity\Lcs.Entity.csproj">
+      <Project>{84AAAFE6-3F60-4D2A-98D6-269395A301B2}</Project>
+      <Name>Lcs.Entity</Name>
+    </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Control\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\actions_zoom.svg" />
   </ItemGroup>
@@ -149,6 +185,57 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\managerelations.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bo_product_group.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bo_category.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\status_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\status_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bo_price_item.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refreshallpivottable.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\properties.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chartdatalabels_insideend.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bo_position.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bo_person.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bo_department.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bo_customer.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\viewsettings.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\parameters.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\insertimage.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bo_sale.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\piepoints.svg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

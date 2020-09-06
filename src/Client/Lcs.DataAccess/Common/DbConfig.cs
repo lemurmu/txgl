@@ -6,7 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 
-namespace Itc.AITest.DataAccess
+namespace Lcs.DataAccess
 {
     public class DbConfig
     {
