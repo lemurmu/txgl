@@ -20,5 +20,29 @@ namespace Lcs.DataAccess
             }
         }
 
+        public long Insert(lcs_goods lcs_Goods)
+        {
+            using (var con = DbConfig.GetConnection())
+            {
+                return con.Insert<lcs_goods>(lcs_Goods);
+            }
+        }
+
+        public bool UpDate(lcs_goods lcs_Goods)
+        {
+            using (var con = DbConfig.GetConnection())
+            {
+                return con.Update<lcs_goods>(lcs_Goods);
+            }
+        }
+
+        public bool Delete(lcs_goods lcs_Goods)
+        {
+            using (var con = DbConfig.GetConnection())
+            {
+                return con.Delete<lcs_goods>(lcs_Goods);
+            }
+        }
+
     }
 }

@@ -10,7 +10,8 @@ namespace Lcs.DataAccess
 {
     public class DbConfig
     {
-        public static readonly string ConnectionString = ConfigurationManager.ConnectionStrings["DbConnectionString"].ConnectionString;
+
+        public static string ConnectionString { set; get; }
 
         public  static IDbConnection GetConnection()
         {
@@ -18,5 +19,8 @@ namespace Lcs.DataAccess
             if (con.State != ConnectionState.Open) con.Open();
             return con;
         }
+
+
+
     }
 }

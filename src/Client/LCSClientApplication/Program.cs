@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Lcs.DataAccess;
+using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,6 +18,8 @@ namespace LCSClientApplication
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            DbConfig.ConnectionString= ConfigurationManager.ConnectionStrings["DbConnectionString"].ConnectionString;
+
             Application.Run(new FrmMain());
         }
     }

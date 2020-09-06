@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using LcsWebAPI.Service;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -26,6 +27,8 @@ namespace LcsWebAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            //自动初始化AppSettings实例并且映射appSettings里的配置
+            services.Configure<AppSettingModel>(Configuration.GetSection("Appsettings"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
