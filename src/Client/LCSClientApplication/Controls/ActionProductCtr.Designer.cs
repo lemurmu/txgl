@@ -1,6 +1,6 @@
 ﻿namespace LCSClientApplication.Controls
 {
-    partial class AddProductCtr
+    partial class ActionProductCtr
     {
         /// <summary> 
         /// 必需的设计器变量。
@@ -1209,11 +1209,11 @@
             this.goods_type_txt.TabIndex = 35;
             this.goods_type_txt.WaterText = "";
             // 
-            // AddProductCtr
+            // ActionProductCtr
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(683, 549);
+            this.ClientSize = new System.Drawing.Size(672, 549);
             this.Controls.Add(this.goods_type_txt);
             this.Controls.Add(this.skinButton2);
             this.Controls.Add(this.skinButton1);
@@ -1263,7 +1263,7 @@
             this.Controls.Add(this.skinLabel1);
             this.Controls.Add(this.goods_id_txt);
             this.MaximizeBox = false;
-            this.Name = "AddProductCtr";
+            this.Name = "ActionProductCtr";
             this.Text = "";
             this.ResumeLayout(false);
             this.PerformLayout();

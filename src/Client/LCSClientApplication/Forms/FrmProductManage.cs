@@ -35,7 +35,7 @@ namespace LCSClientApplication.Forms
 
         private void skinButton1_Click(object sender, EventArgs e)
         {
-            AddProductCtr addProductCtr = new AddProductCtr(ActoinType.add);
+            ActionProductCtr addProductCtr = new ActionProductCtr(ActoinType.add);
             addProductCtr.StartPosition = FormStartPosition.CenterScreen;
             addProductCtr.Text = "增加产品";
             addProductCtr.Icon = this.Icon;
@@ -44,7 +44,7 @@ namespace LCSClientApplication.Forms
 
         private void skinButton3_Click(object sender, EventArgs e)
         {
-            AddProductCtr addProductCtr = new AddProductCtr(ActoinType.modify);
+            ActionProductCtr addProductCtr = new ActionProductCtr(ActoinType.modify);
             addProductCtr.StartPosition = FormStartPosition.CenterScreen;
             addProductCtr.Text = "修改产品";
             addProductCtr.Icon = this.Icon;

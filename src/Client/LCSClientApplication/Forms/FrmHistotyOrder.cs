@@ -51,12 +51,29 @@ namespace LCSClientApplication.Forms
             SplashScreenHelper.CloseForm();
         }
 
+
+        void ReportExportBegin(IGRExportOption Sender)
+        {
+            //ExportBegin 事件在将报表导出之前会触发到，无论是调用 ExportDirect 与 Export 方法，
+            //还是从打印预览窗口等地方执行导出，都会触发到 ExportBegin 事件。
+            //通常在 ExportBegin 事件中设置导出选项参数，改变默认导出行为
+
+            Sender.AbortOpenFile = true;  //导出后不用关联程序打开导出文件，如导出Excel文件之后不用Excel打开
+                                          // Sender.AbortShowOptionDlg = !ckbShowOptionDlg.Checked;  //导出之前不显示导出选项设置对话框
+        }
+
+        private void ReportList_FetchRecord()
+        {
+            GridReportHelper.FillRecordToReport<lcs_order_info>(Report, orderList);
+        }
+
         /// <summary>
         /// 打印
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void button1_Click(object sender, EventArgs e)
+
+        private void skinButton1_Click(object sender, EventArgs e)
         {
             if (orderList == null)
             {
@@ -72,22 +89,6 @@ namespace LCSClientApplication.Forms
             Report.FetchRecord += ReportList_FetchRecord;
 
             Report.PrintPreview(true);
-
-        }
-
-        void ReportExportBegin(IGRExportOption Sender)
-        {
-            //ExportBegin 事件在将报表导出之前会触发到，无论是调用 ExportDirect 与 Export 方法，
-            //还是从打印预览窗口等地方执行导出，都会触发到 ExportBegin 事件。
-            //通常在 ExportBegin 事件中设置导出选项参数，改变默认导出行为
-
-            Sender.AbortOpenFile = true;  //导出后不用关联程序打开导出文件，如导出Excel文件之后不用Excel打开
-                                          // Sender.AbortShowOptionDlg = !ckbShowOptionDlg.Checked;  //导出之前不显示导出选项设置对话框
-        }
-
-        private void ReportList_FetchRecord()
-        {
-            GridReportHelper.FillRecordToReport<lcs_order_info>(Report, orderList);
         }
     }
 }

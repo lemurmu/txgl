@@ -36,8 +36,31 @@ namespace LCSClientApplication
         public FrmMain()
         {
             InitializeComponent();
-            skinTabControl2.SelectedIndex = 0;
+            func_tab.SelectedIndex = 0;
             timer1.Start();
+           // Init();
+        }
+
+        //void Init()
+        //{
+        //    foreach (TabPage page in func_tab.TabPages)
+        //    {
+        //        foreach (var ctr in page.Controls)
+        //        {
+        //            if (ctr is SkinButton)
+        //            {
+        //                SkinButton button = ((SkinButton)ctr);
+        //                button.NormlBack = Image.FromFile("Images/b1.png");
+        //                button.DownBack = Image.FromFile("Images/b2.png");
+        //                button.MouseBack = Image.FromFile("Images/b3.png");
+        //            }
+        //        }
+        //    }
+        //}
+       
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            timeLab.Text = "系统时间:" + DateTime.Now.ToString("yy-MM-dd HH:mm:ss");
         }
 
         /// <summary>
@@ -45,7 +68,7 @@ namespace LCSClientApplication
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void skinButton6_Click(object sender, EventArgs e)
+        private void skinButton4_Click(object sender, EventArgs e)
         {
             FrmHistotyOrder frmHistotyOrder = new FrmHistotyOrder();
             frmHistotyOrder.Icon = this.Icon;
@@ -57,16 +80,11 @@ namespace LCSClientApplication
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void skinButton12_Click(object sender, EventArgs e)
+        private void skinButton12_Click_1(object sender, EventArgs e)
         {
             FrmProductManage frmProductManage = new FrmProductManage();
             frmProductManage.Icon = this.Icon;
             frmProductManage.Show();
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            timeLab.Text = "系统时间:" + DateTime.Now.ToString("yy-MM-dd HH:mm:ss");
         }
     }
 }

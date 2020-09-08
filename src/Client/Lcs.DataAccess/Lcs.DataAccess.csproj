@@ -60,10 +60,6 @@
       <Project>{9c6f8306-88bc-4cb0-8e1b-45ac56ae44a8}</Project>
       <Name>Library.DataAccess</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Lcs.Entity\Lcs.Entity.csproj">
-      <Project>{84aaafe6-3f60-4d2a-98d6-269395a301b2}</Project>
-      <Name>Lcs.Entity</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

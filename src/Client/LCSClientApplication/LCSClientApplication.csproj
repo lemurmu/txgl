@@ -72,11 +72,11 @@
   <ItemGroup>
     <Compile Include="CommonToolKit\GridReportHelper.cs" />
     <Compile Include="CommonToolKit\SplashScreenHelper.cs" />
-    <Compile Include="Controls\AddProductCtr.cs">
+    <Compile Include="Controls\ActionProductCtr.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Controls\AddProductCtr.Designer.cs">
-      <DependentUpon>AddProductCtr.cs</DependentUpon>
+    <Compile Include="Controls\ActionProductCtr.Designer.cs">
+      <DependentUpon>ActionProductCtr.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmHistotyOrder.cs">
       <SubType>Form</SubType>
@@ -118,8 +118,8 @@
     <Compile Include="CommonToolKit\Logger.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Controls\AddProductCtr.resx">
-      <DependentUpon>AddProductCtr.cs</DependentUpon>
+    <EmbeddedResource Include="Controls\ActionProductCtr.resx">
+      <DependentUpon>ActionProductCtr.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmHistotyOrder.resx">
       <DependentUpon>FrmHistotyOrder.cs</DependentUpon>
@@ -171,10 +171,6 @@
     <ProjectReference Include="..\Lcs.DataAccess\Lcs.DataAccess.csproj">
       <Project>{D140F074-0D57-4F6D-9769-A6B0B5C865A9}</Project>
       <Name>Lcs.DataAccess</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Lcs.Entity\Lcs.Entity.csproj">
-      <Project>{84AAAFE6-3F60-4D2A-98D6-269395A301B2}</Project>
-      <Name>Lcs.Entity</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

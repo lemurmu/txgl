@@ -144,10 +144,6 @@
       <Project>{D140F074-0D57-4F6D-9769-A6B0B5C865A9}</Project>
       <Name>Lcs.DataAccess</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Lcs.Entity\Lcs.Entity.csproj">
-      <Project>{84AAAFE6-3F60-4D2A-98D6-269395A301B2}</Project>
-      <Name>Lcs.Entity</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

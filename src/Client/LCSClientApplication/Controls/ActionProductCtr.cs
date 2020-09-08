@@ -15,9 +15,9 @@ using System.Windows.Forms.VisualStyles;
 
 namespace LCSClientApplication.Controls
 {
-    public partial class AddProductCtr : CCSkinMain
+    public partial class ActionProductCtr : CCSkinMain
     {
-        public AddProductCtr(ActoinType actoinType)
+        public ActionProductCtr(ActoinType actoinType)
         {
             InitializeComponent();
             this.actoinType = actoinType;
@@ -56,10 +56,9 @@ namespace LCSClientApplication.Controls
             }
 
             var request = new RestRequest(api, Method.POST);
-            var response = restclient.Execute(request);
             request.AddHeader("Content-Type", "application/json");
             request.AddJsonBody(goods);
-            response = restclient.Execute(request);
+            var response = restclient.Execute(request);
             var resout = JsonConvert.DeserializeObject<bool>(response.Content);
 
         }

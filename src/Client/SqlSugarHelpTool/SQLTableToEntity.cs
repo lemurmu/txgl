@@ -17,7 +17,7 @@ namespace SqlSugarHelpTool
         /// </summary>
         private SqlSugarClient _db;
         //数据库连接字符串
-        private string _connstr = "server=h5.lisboa.tk;uid=h5_lisboa_tk;pwd=74EpHAZtfJ;database=h5_lisboa_tk";
+        private string _connstr = "server=localhost;uid=root;pwd=123456;database=txgl";
         /// <summary>
         /// 连接数据库
         /// </summary>

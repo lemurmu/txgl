@@ -7,6 +7,7 @@ using Lcs.Entity;
 using LcsWebAPI.Service;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
 namespace LcsWebAPI.Controllers
@@ -17,12 +18,14 @@ namespace LcsWebAPI.Controllers
     {
         private GoodsDel goodsDel = new GoodsDel();
 
-        public readonly AppSettingModel _appSettingModel;
+        private readonly AppSettingModel _appSettingModel;
+        private readonly ILogger<GoodsController> _logger;
         //注入;
-        public GoodsController(IOptions<AppSettingModel> appSettingModel)
+        public GoodsController(IOptions<AppSettingModel> appSettingModel, ILogger<GoodsController> logger)
         {
             _appSettingModel = appSettingModel.Value;
             DbConfig.ConnectionString = _appSettingModel.ConnectionString;
+            _logger = logger;
         }
 
         [Route("list")]
@@ -40,10 +43,12 @@ namespace LcsWebAPI.Controllers
             try
             {
                 goodsDel.Insert(lcs_Goods);
+                _logger.LogInformation("商品成功添加");
                 return true;
             }
             catch (Exception ex)
             {
+                _logger.LogError(ex,"商品添加失败");
                 return false;
             }
         }

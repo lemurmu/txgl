@@ -20,12 +20,20 @@ namespace Lcs.DataAccess
             }
         }
 
-        public long Insert(lcs_goods lcs_Goods)
+        public void Insert(lcs_goods lcs_Goods)
         {
+            const string sql = "INSERT INTO lcs_goods (cat_id, goods_name) VALUES (@cat_id,@goods_name)";
+
             using (var con = DbConfig.GetConnection())
             {
-                return con.Insert<lcs_goods>(lcs_Goods);
+                con.Execute(sql, lcs_Goods);
             }
+
+            //using (var con = DbConfig.GetConnection())
+            //{
+
+            //    return con.Insert<lcs_goods>(lcs_Goods);
+            //}
         }
 
         public bool UpDate(lcs_goods lcs_Goods)
