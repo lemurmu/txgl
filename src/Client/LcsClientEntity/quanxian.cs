@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Library.DataAccess;
+using System;
 using System.Linq;
 using System.Text;
 
@@ -7,9 +8,10 @@ namespace Lcs.Entity
     ///<summary>
     ///
     ///</summary>
-    public partial class quanxian
+    [Table("quanxian")]
+    public partial class Quanxian
     {
-           public quanxian(){
+           public Quanxian(){
 
 
            }

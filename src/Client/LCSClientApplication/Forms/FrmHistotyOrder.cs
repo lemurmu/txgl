@@ -23,20 +23,19 @@ namespace LCSClientApplication.Forms
         {
             InitializeComponent();
             skinDataGridView.Columns.AddRange(new DataGridViewColumn[] {
-            new DataGridViewTextBoxColumn { HeaderText="订单编号",DataPropertyName="order_id"},
-            new DataGridViewTextBoxColumn  { HeaderText="订单日期",DataPropertyName="order_sn"},
-            new DataGridViewTextBoxColumn { HeaderText="客户名称",DataPropertyName="consignee"},
-            new DataGridViewTextBoxColumn { HeaderText="联系人",DataPropertyName="mobile"},
-            new DataGridViewTextBoxColumn { HeaderText="订单金额",DataPropertyName="money_paid"},
-            new DataGridViewTextBoxColumn { HeaderText="业务员",DataPropertyName="agency_id"},
-            new DataGridViewTextBoxColumn { HeaderText="备注",DataPropertyName="how_oos"},
+            new DataGridViewTextBoxColumn { HeaderText="订单编号",DataPropertyName="bianhao"},
+            new DataGridViewTextBoxColumn  { HeaderText="订单日期",DataPropertyName="fecha_c"},
+            new DataGridViewTextBoxColumn { HeaderText="客户名称",DataPropertyName="name"},
+            new DataGridViewTextBoxColumn { HeaderText="联系人",DataPropertyName="lianxiren"},
+            new DataGridViewTextBoxColumn { HeaderText="业务员",DataPropertyName="rate"},
+            new DataGridViewTextBoxColumn { HeaderText="备注",DataPropertyName="beizhu"},
             });
             this.skinDataGridView.AutoGenerateColumns = false;
         }
 
         private OrderDel _orderDel = new OrderDel();
         private GridppReport Report; //定义Grid++Report报表主对象
-        List<lcs_order_info> orderList;
+        List<pedidokehu> orderList;
 
         /// <summary>
         /// 加载时查询数据
@@ -47,7 +46,7 @@ namespace LCSClientApplication.Forms
         {
             SplashScreenHelper.ShowLoadingScreen();
             orderList = _orderDel.GetHistoricalOrders();
-            skinDataGridView.DataSource = new BindingList<lcs_order_info>(orderList);
+            skinDataGridView.DataSource = orderList;
             SplashScreenHelper.CloseForm();
         }
 
@@ -64,7 +63,7 @@ namespace LCSClientApplication.Forms
 
         private void ReportList_FetchRecord()
         {
-            GridReportHelper.FillRecordToReport<lcs_order_info>(Report, orderList);
+            GridReportHelper.FillRecordToReport<pedidokehu>(Report, orderList);
         }
 
         /// <summary>

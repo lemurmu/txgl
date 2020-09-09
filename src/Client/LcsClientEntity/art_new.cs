@@ -32,7 +32,7 @@ namespace Lcs.Entity
            /// Default:0
            /// Nullable:False
            /// </summary>           
-           public int new {get;set;}
+           public int new1 {get;set;}//冲突
 
            /// <summary>
            /// Desc:

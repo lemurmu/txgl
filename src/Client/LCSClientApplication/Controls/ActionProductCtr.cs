@@ -31,17 +31,15 @@ namespace LCSClientApplication.Controls
 
         private void skinButton1_Click(object sender, EventArgs e)
         {
-            lcs_goods goods = new lcs_goods
+            articulo goods = new articulo
             {
-                cat_id = short.Parse(goods_id_txt.Text),
-                goods_thumb = goods_thumb_txt.Text,
-                goods_name = zh_name_txt.Text,
+               
 
             };
             var restclient = new RestClient("https://localhost:5001");
             var rq = new RestRequest("/api/Goods/list", Method.GET);
             IRestResponse resp = restclient.Execute(rq);
-            List<lcs_goods> list = JsonConvert.DeserializeObject<List<lcs_goods>>(resp.Content);
+            List<articulo> list = JsonConvert.DeserializeObject<List<articulo>>(resp.Content);
             goods = list[0];
 
             string api = "";

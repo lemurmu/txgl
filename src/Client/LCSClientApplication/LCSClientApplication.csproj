@@ -33,8 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>
-    </ApplicationIcon>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup />
   <ItemGroup>
@@ -163,7 +162,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\1.jpg" />
   </ItemGroup>
@@ -171,6 +172,10 @@
     <ProjectReference Include="..\Lcs.DataAccess\Lcs.DataAccess.csproj">
       <Project>{D140F074-0D57-4F6D-9769-A6B0B5C865A9}</Project>
       <Name>Lcs.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LcsClientEntity\LcsClientEntity.csproj">
+      <Project>{EA56439C-5886-470F-8D17-8433C10B66F3}</Project>
+      <Name>LcsClientEntity</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

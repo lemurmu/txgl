@@ -10,45 +10,45 @@ namespace Lcs.DataAccess
 {
     public class GoodsDel
     {
-        public List<lcs_goods> GetGoodsList()
+        public List<articulo> GetGoodsList()
         {
-            const string sql = "select is_check,goods_id,goods_img,goods_sn,goods_thumb,goods_name,click_count,shop_price,warn_number,seller_note from lcs_goods";
+            const string sql = "select status,bianhao,codigo,baozhuangshu,zhuangxiangshu,kucun,namecn,Weizhi,beizhu,maijia from articulo";
             using (var con = DbConfig.GetConnection())
             {
-                return con.Query<lcs_goods>(sql)
+                return con.Query<articulo>(sql)
                     .ToList();
             }
         }
 
-        public void Insert(lcs_goods lcs_Goods)
+        public void Insert(articulo lcs_Goods)
         {
-            const string sql = "INSERT INTO lcs_goods (cat_id, goods_name) VALUES (@cat_id,@goods_name)";
-
-            using (var con = DbConfig.GetConnection())
-            {
-                con.Execute(sql, lcs_Goods);
-            }
+            //const string sql = "INSERT INTO lcs_goods (cat_id, goods_name) VALUES (@cat_id,@goods_name)";
 
             //using (var con = DbConfig.GetConnection())
             //{
-
-            //    return con.Insert<lcs_goods>(lcs_Goods);
+            //    con.Execute(sql, lcs_Goods);
             //}
-        }
 
-        public bool UpDate(lcs_goods lcs_Goods)
-        {
             using (var con = DbConfig.GetConnection())
             {
-                return con.Update<lcs_goods>(lcs_Goods);
+
+                con.Insert<articulo>(lcs_Goods);
             }
         }
 
-        public bool Delete(lcs_goods lcs_Goods)
+        public bool UpDate(articulo lcs_Goods)
         {
             using (var con = DbConfig.GetConnection())
             {
-                return con.Delete<lcs_goods>(lcs_Goods);
+                return con.Update<articulo>(lcs_Goods);
+            }
+        }
+
+        public bool Delete(articulo lcs_Goods)
+        {
+            using (var con = DbConfig.GetConnection())
+            {
+                return con.Delete<articulo>(lcs_Goods);
             }
         }
 

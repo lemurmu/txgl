@@ -14,12 +14,12 @@ namespace Lcs.DataAccess
         /// 查询历史订单
         /// </summary>
         /// <returns></returns>
-        public List<lcs_order_info> GetHistoricalOrders()
+        public List<pedidokehu> GetHistoricalOrders()
         {
-            const string sql = "select order_id,order_sn,how_oos,consignee,mobile,agency_id,money_paid from lcs_order_info";
+            const string sql = "select bianhao,fecha_c,beizhu,name,lianxiren,rate from pedidokehu";
             using (var con = DbConfig.GetConnection())
             {
-                return con.Query<lcs_order_info>(sql)
+                return con.Query<pedidokehu>(sql)
                     .ToList();
             }
         }

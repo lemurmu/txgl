@@ -34,17 +34,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.product_grid = new CCWin.SkinControl.SkinDataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.图片 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.位置 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.编号 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.skinButton1 = new CCWin.SkinControl.SkinButton();
             this.skinButton2 = new CCWin.SkinControl.SkinButton();
             this.skinButton3 = new CCWin.SkinControl.SkinButton();
@@ -68,18 +57,6 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.product_grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.product_grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.product_grid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.图片,
-            this.位置,
-            this.编号,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column7,
-            this.Column8});
             this.product_grid.ColumnSelectForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
@@ -108,72 +85,6 @@
             this.product_grid.TitleBack = null;
             this.product_grid.TitleBackColorBegin = System.Drawing.Color.White;
             this.product_grid.TitleBackColorEnd = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(196)))), ((int)(((byte)(242)))));
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "is_check";
-            this.Column1.HeaderText = "可用";
-            this.Column1.Name = "Column1";
-            // 
-            // 图片
-            // 
-            this.图片.DataPropertyName = "goods_img";
-            this.图片.HeaderText = "图片";
-            this.图片.Name = "图片";
-            // 
-            // 位置
-            // 
-            this.位置.DataPropertyName = "goods_sn";
-            this.位置.HeaderText = "位置";
-            this.位置.Name = "位置";
-            // 
-            // 编号
-            // 
-            this.编号.DataPropertyName = "goods_id";
-            this.编号.HeaderText = "编号";
-            this.编号.Name = "编号";
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "goods_thumb";
-            this.Column2.HeaderText = "条形";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "goods_name";
-            this.Column3.HeaderText = "中文品名";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "click_count";
-            this.Column4.HeaderText = "包装数";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "click_count";
-            this.Column5.HeaderText = "装箱数";
-            this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            this.Column6.DataPropertyName = "shop_price";
-            this.Column6.HeaderText = "实价";
-            this.Column6.Name = "Column6";
-            // 
-            // Column7
-            // 
-            this.Column7.DataPropertyName = "warn_number";
-            this.Column7.HeaderText = "库存";
-            this.Column7.Name = "Column7";
-            // 
-            // Column8
-            // 
-            this.Column8.DataPropertyName = "seller_note";
-            this.Column8.HeaderText = "备注";
-            this.Column8.Name = "Column8";
             // 
             // skinButton1
             // 
@@ -242,17 +153,6 @@
         #endregion
 
         private CCWin.SkinControl.SkinDataGridView product_grid;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewImageColumn 图片;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 位置;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 编号;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private CCWin.SkinControl.SkinButton skinButton1;
         private CCWin.SkinControl.SkinButton skinButton2;
         private CCWin.SkinControl.SkinButton skinButton3;

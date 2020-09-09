@@ -25,8 +25,8 @@ namespace LcsClient.Control
 
         private void OrderHistoryCtrol_Load(object sender, EventArgs e)
         {
-            List<lcs_order_info> orderList = _orderDel.GetHistoricalOrders();
-            orderGrid.DataSource = orderList;
+           // List<lcs_order_info> orderList = _orderDel.GetHistoricalOrders();
+            //orderGrid.DataSource = orderList;
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)
