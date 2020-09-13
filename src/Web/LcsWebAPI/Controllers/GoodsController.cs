@@ -2,75 +2,114 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Lcs.DataAccess;
-using Lcs.Entity;
+using CloudDBEntity2;
 using LcsWebAPI.Service;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Newtonsoft.Json.Linq;
 
 namespace LcsWebAPI.Controllers
 {
-  //  [Route("api/[controller]")]
+    [Route("api/[controller]")]
     [ApiController]
     public class GoodsController : ControllerBase
     {
-        //private GoodsDel goodsDel = new GoodsDel();
 
-        //private readonly AppSettingModel _appSettingModel;
-        //private readonly ILogger<GoodsController> _logger;
-        ////注入;
-        //public GoodsController(IOptions<AppSettingModel> appSettingModel, ILogger<GoodsController> logger)
-        //{
-        //    _appSettingModel = appSettingModel.Value;
-        //    DbConfig.ConnectionString = _appSettingModel.ConnectionString;
-        //    _logger = logger;
-        //}
-
-        //[Route("list")]
-        //[HttpGet]
-        //public List<lcs_goods> GetGoodsList()
-        //{
-        //    return goodsDel.GetGoodsList();
-        //}
+        private readonly h5_lisboa_tkContext _context;
+        private readonly ILogger<GoodsController> _logger;
 
 
-        //[Route("insert")]
-        //[HttpPost]
-        //public bool Insert([FromBody] lcs_goods lcs_Goods)
-        // {
-        //    try
-        //    {
-        //        goodsDel.Insert(lcs_Goods);
-        //        _logger.LogInformation("商品成功添加");
-        //        return true;
-        //    } 
-        //    catch (Exception ex)
-        //    {
-        //        _logger.LogError(ex,"商品添加失败");
-        //        return false;
-        //    }
-        //}
-         
+        //注入数据库上下文对象和日志对象
+        public GoodsController(h5_lisboa_tkContext context, ILogger<GoodsController> logger)
+        {
+            _context = context;
+            _logger = logger;
+        }
+
+        /// <summary>
+        /// 添加产品
+        /// </summary>
+        /// <param name="lcs_Goods"></param>
+        /// <returns></returns>
+        [Route("insert")]
+        [HttpPost]
+        public bool Insert(JObject lcs_Goods)
+        {
+            try
+            {
+                _context.LcsGoods.Add(new LcsGoods
+                {
+                   
+
+
+                });
+                _logger.LogInformation("商品成功添加");
+                return true;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "商品添加失败");
+                return false;
+            }
+        }
+
+
+        /// <summary>
+        /// 修改
+        /// </summary>
+        /// <param name="lcs_Goods"></param>
+        /// <returns></returns>
+
+        [Route("update")]
+        [HttpPost]
+        public bool Update(JObject lcs_Goods)
+        {
+            try
+            {
+                _context.LcsGoods.Update(new LcsGoods
+                {
 
 
 
-        //[Route("update")]
-        //[HttpPost]
-        //public bool Update([FromBody] lcs_goods lcs_Goods)
-        //{
-        //    return goodsDel.UpDate(lcs_Goods);``````````
-        
-        //}
+                });
+                _logger.LogInformation("修改商品成功");
+                return true;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "修改商品成失败");
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// 删除
+        /// </summary>
+        /// <param name="lcs_Goods"></param>
+        /// <returns></returns>
+        [Route("delete")]
+        [HttpPost]
+        public bool Delete(JObject lcs_Goods)
+        {
+            try
+            {
+                _context.LcsGoods.Remove(new LcsGoods
+                {
 
 
-        //[Route("delete")]
-        //[HttpPost]
-        //public bool Delete([FromBody] lcs_goods lcs_Goods)
-        //{
-        //    return goodsDel.Delete(lcs_Goods);
-        //}
+
+                });
+                _logger.LogInformation("商品成功删除");
+                return true;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "商品删除失败");
+                return false;
+            }
+        }
 
 
 

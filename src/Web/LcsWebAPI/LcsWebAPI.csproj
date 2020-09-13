@@ -9,12 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Core\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\Client\Lcs.DataAccess\Lcs.DataAccess.csproj" />
-    <ProjectReference Include="..\..\Client\Lcs.Entity\Lcs.Entity.csproj" />
+    <ProjectReference Include="..\CloudDBEntity2\CloudDBEntity2.csproj" />
   </ItemGroup>
 
 

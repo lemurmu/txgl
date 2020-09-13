@@ -18,8 +18,6 @@ namespace LCSClientApplication
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            DbConfig.ConnectionString= ConfigurationManager.ConnectionStrings["DbConnectionString"].ConnectionString;
-
             Application.Run(new FrmMain());
         }
     }

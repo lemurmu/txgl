@@ -31,7 +31,7 @@ using LCSClientApplication.Forms;
 
 namespace LCSClientApplication
 {
-    public partial class FrmMain : CCSkinMain
+    public partial class FrmMain : Skin_DevExpress
     {
         public FrmMain()
         {
@@ -86,5 +86,6 @@ namespace LCSClientApplication
             frmProductManage.Icon = this.Icon;
             frmProductManage.Show();
         }
+
     }
 }

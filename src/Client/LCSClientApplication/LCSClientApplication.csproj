@@ -115,6 +115,7 @@
     </Compile>
     <Compile Include="CommonToolKit\GridppReport.cs" />
     <Compile Include="CommonToolKit\Logger.cs" />
+    <Compile Include="Globle.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Controls\ActionProductCtr.resx">
@@ -164,6 +165,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
+    <Content Include="tubiao\产品资料.png" />
+    <Content Include="tubiao\基础资料.png" />
+    <Content Include="tubiao\库存查询.png" />
+    <Content Include="tubiao\新到订单.png" />
+    <Content Include="tubiao\更新云数据.png" />
+    <Content Include="tubiao\订单管理.png" />
+    <Content Include="tubiao\资料导入.png" />
+    <Content Include="tubiao\辅助工具.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\1.jpg" />

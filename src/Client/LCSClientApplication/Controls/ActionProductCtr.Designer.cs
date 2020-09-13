@@ -50,14 +50,14 @@
             this.beizhu_txt = new CCWin.SkinControl.SkinTextBox();
             this.rank_txt = new CCWin.SkinControl.SkinTextBox();
             this.gonghuo_txt = new CCWin.SkinControl.SkinTextBox();
-            this.skinTextBox11 = new CCWin.SkinControl.SkinTextBox();
-            this.skinTextBox12 = new CCWin.SkinControl.SkinTextBox();
-            this.skinTextBox13 = new CCWin.SkinControl.SkinTextBox();
+            this.shiaji2_txt = new CCWin.SkinControl.SkinTextBox();
+            this.shijia3_txt = new CCWin.SkinControl.SkinTextBox();
+            this.shaijia1_txt = new CCWin.SkinControl.SkinTextBox();
             this.jinjie_txt = new CCWin.SkinControl.SkinTextBox();
-            this.skinTextBox15 = new CCWin.SkinControl.SkinTextBox();
-            this.skinTextBox16 = new CCWin.SkinControl.SkinTextBox();
-            this.skinTextBox17 = new CCWin.SkinControl.SkinTextBox();
-            this.skinTextBox18 = new CCWin.SkinControl.SkinTextBox();
+            this.shiajia_tt = new CCWin.SkinControl.SkinTextBox();
+            this.mubiaokucun_txt = new CCWin.SkinControl.SkinTextBox();
+            this.shijia_tt3 = new CCWin.SkinControl.SkinTextBox();
+            this.shiajia_tt1 = new CCWin.SkinControl.SkinTextBox();
             this.skinLabel12 = new CCWin.SkinControl.SkinLabel();
             this.skinLabel13 = new CCWin.SkinControl.SkinLabel();
             this.skinLabel14 = new CCWin.SkinControl.SkinLabel();
@@ -71,9 +71,9 @@
             this.skinLabel22 = new CCWin.SkinControl.SkinLabel();
             this.skinLabel23 = new CCWin.SkinControl.SkinLabel();
             this.goods_position_txt = new CCWin.SkinControl.SkinTextBox();
-            this.skinTextBox20 = new CCWin.SkinControl.SkinTextBox();
+            this.zuidikuucn_txt = new CCWin.SkinControl.SkinTextBox();
             this.modify_date_dt = new CCWin.SkinControl.SkinDateTimePicker();
-            this.skinComboBox1 = new CCWin.SkinControl.SkinComboBox();
+            this.jinyong_cmb = new CCWin.SkinControl.SkinComboBox();
             this.skinButton1 = new CCWin.SkinControl.SkinButton();
             this.skinButton2 = new CCWin.SkinControl.SkinButton();
             this.goods_type_txt = new CCWin.SkinControl.SkinComboBox();
@@ -591,128 +591,128 @@
             this.gonghuo_txt.WaterText = "";
             this.gonghuo_txt.WordWrap = true;
             // 
-            // skinTextBox11
+            // shiaji2_txt
             // 
-            this.skinTextBox11.BackColor = System.Drawing.Color.Transparent;
-            this.skinTextBox11.DownBack = null;
-            this.skinTextBox11.Icon = null;
-            this.skinTextBox11.IconIsButton = false;
-            this.skinTextBox11.IconMouseState = CCWin.SkinClass.ControlState.Normal;
-            this.skinTextBox11.IsPasswordChat = '\0';
-            this.skinTextBox11.IsSystemPasswordChar = false;
-            this.skinTextBox11.Lines = new string[0];
-            this.skinTextBox11.Location = new System.Drawing.Point(431, 161);
-            this.skinTextBox11.Margin = new System.Windows.Forms.Padding(0);
-            this.skinTextBox11.MaxLength = 32767;
-            this.skinTextBox11.MinimumSize = new System.Drawing.Size(28, 28);
-            this.skinTextBox11.MouseBack = null;
-            this.skinTextBox11.MouseState = CCWin.SkinClass.ControlState.Normal;
-            this.skinTextBox11.Multiline = false;
-            this.skinTextBox11.Name = "skinTextBox11";
-            this.skinTextBox11.NormlBack = null;
-            this.skinTextBox11.Padding = new System.Windows.Forms.Padding(5);
-            this.skinTextBox11.ReadOnly = false;
-            this.skinTextBox11.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.skinTextBox11.Size = new System.Drawing.Size(101, 28);
-            // 
-            // 
-            // 
-            this.skinTextBox11.SkinTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.skinTextBox11.SkinTxt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinTextBox11.SkinTxt.Font = new System.Drawing.Font("微软雅黑", 9.75F);
-            this.skinTextBox11.SkinTxt.Location = new System.Drawing.Point(5, 5);
-            this.skinTextBox11.SkinTxt.Name = "BaseText";
-            this.skinTextBox11.SkinTxt.Size = new System.Drawing.Size(91, 18);
-            this.skinTextBox11.SkinTxt.TabIndex = 0;
-            this.skinTextBox11.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.skinTextBox11.SkinTxt.WaterText = "";
-            this.skinTextBox11.TabIndex = 15;
-            this.skinTextBox11.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.skinTextBox11.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.skinTextBox11.WaterText = "";
-            this.skinTextBox11.WordWrap = true;
-            // 
-            // skinTextBox12
-            // 
-            this.skinTextBox12.BackColor = System.Drawing.Color.Transparent;
-            this.skinTextBox12.DownBack = null;
-            this.skinTextBox12.Icon = null;
-            this.skinTextBox12.IconIsButton = false;
-            this.skinTextBox12.IconMouseState = CCWin.SkinClass.ControlState.Normal;
-            this.skinTextBox12.IsPasswordChat = '\0';
-            this.skinTextBox12.IsSystemPasswordChar = false;
-            this.skinTextBox12.Lines = new string[0];
-            this.skinTextBox12.Location = new System.Drawing.Point(431, 201);
-            this.skinTextBox12.Margin = new System.Windows.Forms.Padding(0);
-            this.skinTextBox12.MaxLength = 32767;
-            this.skinTextBox12.MinimumSize = new System.Drawing.Size(28, 28);
-            this.skinTextBox12.MouseBack = null;
-            this.skinTextBox12.MouseState = CCWin.SkinClass.ControlState.Normal;
-            this.skinTextBox12.Multiline = false;
-            this.skinTextBox12.Name = "skinTextBox12";
-            this.skinTextBox12.NormlBack = null;
-            this.skinTextBox12.Padding = new System.Windows.Forms.Padding(5);
-            this.skinTextBox12.ReadOnly = false;
-            this.skinTextBox12.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.skinTextBox12.Size = new System.Drawing.Size(101, 28);
+            this.shiaji2_txt.BackColor = System.Drawing.Color.Transparent;
+            this.shiaji2_txt.DownBack = null;
+            this.shiaji2_txt.Icon = null;
+            this.shiaji2_txt.IconIsButton = false;
+            this.shiaji2_txt.IconMouseState = CCWin.SkinClass.ControlState.Normal;
+            this.shiaji2_txt.IsPasswordChat = '\0';
+            this.shiaji2_txt.IsSystemPasswordChar = false;
+            this.shiaji2_txt.Lines = new string[0];
+            this.shiaji2_txt.Location = new System.Drawing.Point(431, 161);
+            this.shiaji2_txt.Margin = new System.Windows.Forms.Padding(0);
+            this.shiaji2_txt.MaxLength = 32767;
+            this.shiaji2_txt.MinimumSize = new System.Drawing.Size(28, 28);
+            this.shiaji2_txt.MouseBack = null;
+            this.shiaji2_txt.MouseState = CCWin.SkinClass.ControlState.Normal;
+            this.shiaji2_txt.Multiline = false;
+            this.shiaji2_txt.Name = "shiaji2_txt";
+            this.shiaji2_txt.NormlBack = null;
+            this.shiaji2_txt.Padding = new System.Windows.Forms.Padding(5);
+            this.shiaji2_txt.ReadOnly = false;
+            this.shiaji2_txt.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.shiaji2_txt.Size = new System.Drawing.Size(101, 28);
             // 
             // 
             // 
-            this.skinTextBox12.SkinTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.skinTextBox12.SkinTxt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinTextBox12.SkinTxt.Font = new System.Drawing.Font("微软雅黑", 9.75F);
-            this.skinTextBox12.SkinTxt.Location = new System.Drawing.Point(5, 5);
-            this.skinTextBox12.SkinTxt.Name = "BaseText";
-            this.skinTextBox12.SkinTxt.Size = new System.Drawing.Size(91, 18);
-            this.skinTextBox12.SkinTxt.TabIndex = 0;
-            this.skinTextBox12.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.skinTextBox12.SkinTxt.WaterText = "";
-            this.skinTextBox12.TabIndex = 11;
-            this.skinTextBox12.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.skinTextBox12.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.skinTextBox12.WaterText = "";
-            this.skinTextBox12.WordWrap = true;
+            this.shiaji2_txt.SkinTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.shiaji2_txt.SkinTxt.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.shiaji2_txt.SkinTxt.Font = new System.Drawing.Font("微软雅黑", 9.75F);
+            this.shiaji2_txt.SkinTxt.Location = new System.Drawing.Point(5, 5);
+            this.shiaji2_txt.SkinTxt.Name = "BaseText";
+            this.shiaji2_txt.SkinTxt.Size = new System.Drawing.Size(91, 18);
+            this.shiaji2_txt.SkinTxt.TabIndex = 0;
+            this.shiaji2_txt.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.shiaji2_txt.SkinTxt.WaterText = "";
+            this.shiaji2_txt.TabIndex = 15;
+            this.shiaji2_txt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.shiaji2_txt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.shiaji2_txt.WaterText = "";
+            this.shiaji2_txt.WordWrap = true;
             // 
-            // skinTextBox13
+            // shijia3_txt
             // 
-            this.skinTextBox13.BackColor = System.Drawing.Color.Transparent;
-            this.skinTextBox13.DownBack = null;
-            this.skinTextBox13.Icon = null;
-            this.skinTextBox13.IconIsButton = false;
-            this.skinTextBox13.IconMouseState = CCWin.SkinClass.ControlState.Normal;
-            this.skinTextBox13.IsPasswordChat = '\0';
-            this.skinTextBox13.IsSystemPasswordChar = false;
-            this.skinTextBox13.Lines = new string[0];
-            this.skinTextBox13.Location = new System.Drawing.Point(431, 120);
-            this.skinTextBox13.Margin = new System.Windows.Forms.Padding(0);
-            this.skinTextBox13.MaxLength = 32767;
-            this.skinTextBox13.MinimumSize = new System.Drawing.Size(28, 28);
-            this.skinTextBox13.MouseBack = null;
-            this.skinTextBox13.MouseState = CCWin.SkinClass.ControlState.Normal;
-            this.skinTextBox13.Multiline = false;
-            this.skinTextBox13.Name = "skinTextBox13";
-            this.skinTextBox13.NormlBack = null;
-            this.skinTextBox13.Padding = new System.Windows.Forms.Padding(5);
-            this.skinTextBox13.ReadOnly = false;
-            this.skinTextBox13.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.skinTextBox13.Size = new System.Drawing.Size(101, 28);
+            this.shijia3_txt.BackColor = System.Drawing.Color.Transparent;
+            this.shijia3_txt.DownBack = null;
+            this.shijia3_txt.Icon = null;
+            this.shijia3_txt.IconIsButton = false;
+            this.shijia3_txt.IconMouseState = CCWin.SkinClass.ControlState.Normal;
+            this.shijia3_txt.IsPasswordChat = '\0';
+            this.shijia3_txt.IsSystemPasswordChar = false;
+            this.shijia3_txt.Lines = new string[0];
+            this.shijia3_txt.Location = new System.Drawing.Point(431, 201);
+            this.shijia3_txt.Margin = new System.Windows.Forms.Padding(0);
+            this.shijia3_txt.MaxLength = 32767;
+            this.shijia3_txt.MinimumSize = new System.Drawing.Size(28, 28);
+            this.shijia3_txt.MouseBack = null;
+            this.shijia3_txt.MouseState = CCWin.SkinClass.ControlState.Normal;
+            this.shijia3_txt.Multiline = false;
+            this.shijia3_txt.Name = "shijia3_txt";
+            this.shijia3_txt.NormlBack = null;
+            this.shijia3_txt.Padding = new System.Windows.Forms.Padding(5);
+            this.shijia3_txt.ReadOnly = false;
+            this.shijia3_txt.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.shijia3_txt.Size = new System.Drawing.Size(101, 28);
             // 
             // 
             // 
-            this.skinTextBox13.SkinTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.skinTextBox13.SkinTxt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinTextBox13.SkinTxt.Font = new System.Drawing.Font("微软雅黑", 9.75F);
-            this.skinTextBox13.SkinTxt.Location = new System.Drawing.Point(5, 5);
-            this.skinTextBox13.SkinTxt.Name = "BaseText";
-            this.skinTextBox13.SkinTxt.Size = new System.Drawing.Size(91, 18);
-            this.skinTextBox13.SkinTxt.TabIndex = 0;
-            this.skinTextBox13.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.skinTextBox13.SkinTxt.WaterText = "";
-            this.skinTextBox13.TabIndex = 11;
-            this.skinTextBox13.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.skinTextBox13.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.skinTextBox13.WaterText = "";
-            this.skinTextBox13.WordWrap = true;
+            this.shijia3_txt.SkinTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.shijia3_txt.SkinTxt.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.shijia3_txt.SkinTxt.Font = new System.Drawing.Font("微软雅黑", 9.75F);
+            this.shijia3_txt.SkinTxt.Location = new System.Drawing.Point(5, 5);
+            this.shijia3_txt.SkinTxt.Name = "BaseText";
+            this.shijia3_txt.SkinTxt.Size = new System.Drawing.Size(91, 18);
+            this.shijia3_txt.SkinTxt.TabIndex = 0;
+            this.shijia3_txt.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.shijia3_txt.SkinTxt.WaterText = "";
+            this.shijia3_txt.TabIndex = 11;
+            this.shijia3_txt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.shijia3_txt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.shijia3_txt.WaterText = "";
+            this.shijia3_txt.WordWrap = true;
+            // 
+            // shaijia1_txt
+            // 
+            this.shaijia1_txt.BackColor = System.Drawing.Color.Transparent;
+            this.shaijia1_txt.DownBack = null;
+            this.shaijia1_txt.Icon = null;
+            this.shaijia1_txt.IconIsButton = false;
+            this.shaijia1_txt.IconMouseState = CCWin.SkinClass.ControlState.Normal;
+            this.shaijia1_txt.IsPasswordChat = '\0';
+            this.shaijia1_txt.IsSystemPasswordChar = false;
+            this.shaijia1_txt.Lines = new string[0];
+            this.shaijia1_txt.Location = new System.Drawing.Point(431, 120);
+            this.shaijia1_txt.Margin = new System.Windows.Forms.Padding(0);
+            this.shaijia1_txt.MaxLength = 32767;
+            this.shaijia1_txt.MinimumSize = new System.Drawing.Size(28, 28);
+            this.shaijia1_txt.MouseBack = null;
+            this.shaijia1_txt.MouseState = CCWin.SkinClass.ControlState.Normal;
+            this.shaijia1_txt.Multiline = false;
+            this.shaijia1_txt.Name = "shaijia1_txt";
+            this.shaijia1_txt.NormlBack = null;
+            this.shaijia1_txt.Padding = new System.Windows.Forms.Padding(5);
+            this.shaijia1_txt.ReadOnly = false;
+            this.shaijia1_txt.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.shaijia1_txt.Size = new System.Drawing.Size(101, 28);
+            // 
+            // 
+            // 
+            this.shaijia1_txt.SkinTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.shaijia1_txt.SkinTxt.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.shaijia1_txt.SkinTxt.Font = new System.Drawing.Font("微软雅黑", 9.75F);
+            this.shaijia1_txt.SkinTxt.Location = new System.Drawing.Point(5, 5);
+            this.shaijia1_txt.SkinTxt.Name = "BaseText";
+            this.shaijia1_txt.SkinTxt.Size = new System.Drawing.Size(91, 18);
+            this.shaijia1_txt.SkinTxt.TabIndex = 0;
+            this.shaijia1_txt.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.shaijia1_txt.SkinTxt.WaterText = "";
+            this.shaijia1_txt.TabIndex = 11;
+            this.shaijia1_txt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.shaijia1_txt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.shaijia1_txt.WaterText = "";
+            this.shaijia1_txt.WordWrap = true;
             // 
             // jinjie_txt
             // 
@@ -755,169 +755,169 @@
             this.jinjie_txt.WaterText = "";
             this.jinjie_txt.WordWrap = true;
             // 
-            // skinTextBox15
+            // shiajia_tt
             // 
-            this.skinTextBox15.BackColor = System.Drawing.Color.Transparent;
-            this.skinTextBox15.DownBack = null;
-            this.skinTextBox15.Icon = null;
-            this.skinTextBox15.IconIsButton = false;
-            this.skinTextBox15.IconMouseState = CCWin.SkinClass.ControlState.Normal;
-            this.skinTextBox15.IsPasswordChat = '\0';
-            this.skinTextBox15.IsSystemPasswordChar = false;
-            this.skinTextBox15.Lines = new string[0];
-            this.skinTextBox15.Location = new System.Drawing.Point(547, 120);
-            this.skinTextBox15.Margin = new System.Windows.Forms.Padding(0);
-            this.skinTextBox15.MaxLength = 32767;
-            this.skinTextBox15.MinimumSize = new System.Drawing.Size(28, 28);
-            this.skinTextBox15.MouseBack = null;
-            this.skinTextBox15.MouseState = CCWin.SkinClass.ControlState.Normal;
-            this.skinTextBox15.Multiline = false;
-            this.skinTextBox15.Name = "skinTextBox15";
-            this.skinTextBox15.NormlBack = null;
-            this.skinTextBox15.Padding = new System.Windows.Forms.Padding(5);
-            this.skinTextBox15.ReadOnly = false;
-            this.skinTextBox15.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.skinTextBox15.Size = new System.Drawing.Size(72, 28);
-            // 
-            // 
-            // 
-            this.skinTextBox15.SkinTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.skinTextBox15.SkinTxt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinTextBox15.SkinTxt.Font = new System.Drawing.Font("微软雅黑", 9.75F);
-            this.skinTextBox15.SkinTxt.Location = new System.Drawing.Point(5, 5);
-            this.skinTextBox15.SkinTxt.Name = "BaseText";
-            this.skinTextBox15.SkinTxt.Size = new System.Drawing.Size(62, 18);
-            this.skinTextBox15.SkinTxt.TabIndex = 0;
-            this.skinTextBox15.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.skinTextBox15.SkinTxt.WaterText = "";
-            this.skinTextBox15.TabIndex = 16;
-            this.skinTextBox15.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.skinTextBox15.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.skinTextBox15.WaterText = "";
-            this.skinTextBox15.WordWrap = true;
-            // 
-            // skinTextBox16
-            // 
-            this.skinTextBox16.BackColor = System.Drawing.Color.Transparent;
-            this.skinTextBox16.DownBack = null;
-            this.skinTextBox16.Icon = null;
-            this.skinTextBox16.IconIsButton = false;
-            this.skinTextBox16.IconMouseState = CCWin.SkinClass.ControlState.Normal;
-            this.skinTextBox16.IsPasswordChat = '\0';
-            this.skinTextBox16.IsSystemPasswordChar = false;
-            this.skinTextBox16.Lines = new string[0];
-            this.skinTextBox16.Location = new System.Drawing.Point(431, 283);
-            this.skinTextBox16.Margin = new System.Windows.Forms.Padding(0);
-            this.skinTextBox16.MaxLength = 32767;
-            this.skinTextBox16.MinimumSize = new System.Drawing.Size(28, 28);
-            this.skinTextBox16.MouseBack = null;
-            this.skinTextBox16.MouseState = CCWin.SkinClass.ControlState.Normal;
-            this.skinTextBox16.Multiline = false;
-            this.skinTextBox16.Name = "skinTextBox16";
-            this.skinTextBox16.NormlBack = null;
-            this.skinTextBox16.Padding = new System.Windows.Forms.Padding(5);
-            this.skinTextBox16.ReadOnly = false;
-            this.skinTextBox16.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.skinTextBox16.Size = new System.Drawing.Size(188, 28);
+            this.shiajia_tt.BackColor = System.Drawing.Color.Transparent;
+            this.shiajia_tt.DownBack = null;
+            this.shiajia_tt.Icon = null;
+            this.shiajia_tt.IconIsButton = false;
+            this.shiajia_tt.IconMouseState = CCWin.SkinClass.ControlState.Normal;
+            this.shiajia_tt.IsPasswordChat = '\0';
+            this.shiajia_tt.IsSystemPasswordChar = false;
+            this.shiajia_tt.Lines = new string[0];
+            this.shiajia_tt.Location = new System.Drawing.Point(547, 120);
+            this.shiajia_tt.Margin = new System.Windows.Forms.Padding(0);
+            this.shiajia_tt.MaxLength = 32767;
+            this.shiajia_tt.MinimumSize = new System.Drawing.Size(28, 28);
+            this.shiajia_tt.MouseBack = null;
+            this.shiajia_tt.MouseState = CCWin.SkinClass.ControlState.Normal;
+            this.shiajia_tt.Multiline = false;
+            this.shiajia_tt.Name = "shiajia_tt";
+            this.shiajia_tt.NormlBack = null;
+            this.shiajia_tt.Padding = new System.Windows.Forms.Padding(5);
+            this.shiajia_tt.ReadOnly = false;
+            this.shiajia_tt.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.shiajia_tt.Size = new System.Drawing.Size(72, 28);
             // 
             // 
             // 
-            this.skinTextBox16.SkinTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.skinTextBox16.SkinTxt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinTextBox16.SkinTxt.Font = new System.Drawing.Font("微软雅黑", 9.75F);
-            this.skinTextBox16.SkinTxt.Location = new System.Drawing.Point(5, 5);
-            this.skinTextBox16.SkinTxt.Name = "BaseText";
-            this.skinTextBox16.SkinTxt.Size = new System.Drawing.Size(178, 18);
-            this.skinTextBox16.SkinTxt.TabIndex = 0;
-            this.skinTextBox16.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.skinTextBox16.SkinTxt.WaterText = "";
-            this.skinTextBox16.TabIndex = 11;
-            this.skinTextBox16.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.skinTextBox16.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.skinTextBox16.WaterText = "";
-            this.skinTextBox16.WordWrap = true;
+            this.shiajia_tt.SkinTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.shiajia_tt.SkinTxt.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.shiajia_tt.SkinTxt.Font = new System.Drawing.Font("微软雅黑", 9.75F);
+            this.shiajia_tt.SkinTxt.Location = new System.Drawing.Point(5, 5);
+            this.shiajia_tt.SkinTxt.Name = "BaseText";
+            this.shiajia_tt.SkinTxt.Size = new System.Drawing.Size(62, 18);
+            this.shiajia_tt.SkinTxt.TabIndex = 0;
+            this.shiajia_tt.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.shiajia_tt.SkinTxt.WaterText = "";
+            this.shiajia_tt.TabIndex = 16;
+            this.shiajia_tt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.shiajia_tt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.shiajia_tt.WaterText = "";
+            this.shiajia_tt.WordWrap = true;
             // 
-            // skinTextBox17
+            // mubiaokucun_txt
             // 
-            this.skinTextBox17.BackColor = System.Drawing.Color.Transparent;
-            this.skinTextBox17.DownBack = null;
-            this.skinTextBox17.Icon = null;
-            this.skinTextBox17.IconIsButton = false;
-            this.skinTextBox17.IconMouseState = CCWin.SkinClass.ControlState.Normal;
-            this.skinTextBox17.IsPasswordChat = '\0';
-            this.skinTextBox17.IsSystemPasswordChar = false;
-            this.skinTextBox17.Lines = new string[0];
-            this.skinTextBox17.Location = new System.Drawing.Point(547, 201);
-            this.skinTextBox17.Margin = new System.Windows.Forms.Padding(0);
-            this.skinTextBox17.MaxLength = 32767;
-            this.skinTextBox17.MinimumSize = new System.Drawing.Size(28, 28);
-            this.skinTextBox17.MouseBack = null;
-            this.skinTextBox17.MouseState = CCWin.SkinClass.ControlState.Normal;
-            this.skinTextBox17.Multiline = false;
-            this.skinTextBox17.Name = "skinTextBox17";
-            this.skinTextBox17.NormlBack = null;
-            this.skinTextBox17.Padding = new System.Windows.Forms.Padding(5);
-            this.skinTextBox17.ReadOnly = false;
-            this.skinTextBox17.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.skinTextBox17.Size = new System.Drawing.Size(72, 28);
-            // 
-            // 
-            // 
-            this.skinTextBox17.SkinTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.skinTextBox17.SkinTxt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinTextBox17.SkinTxt.Font = new System.Drawing.Font("微软雅黑", 9.75F);
-            this.skinTextBox17.SkinTxt.Location = new System.Drawing.Point(5, 5);
-            this.skinTextBox17.SkinTxt.Name = "BaseText";
-            this.skinTextBox17.SkinTxt.Size = new System.Drawing.Size(62, 18);
-            this.skinTextBox17.SkinTxt.TabIndex = 0;
-            this.skinTextBox17.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.skinTextBox17.SkinTxt.WaterText = "";
-            this.skinTextBox17.TabIndex = 17;
-            this.skinTextBox17.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.skinTextBox17.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.skinTextBox17.WaterText = "";
-            this.skinTextBox17.WordWrap = true;
-            // 
-            // skinTextBox18
-            // 
-            this.skinTextBox18.BackColor = System.Drawing.Color.Transparent;
-            this.skinTextBox18.DownBack = null;
-            this.skinTextBox18.Icon = null;
-            this.skinTextBox18.IconIsButton = false;
-            this.skinTextBox18.IconMouseState = CCWin.SkinClass.ControlState.Normal;
-            this.skinTextBox18.IsPasswordChat = '\0';
-            this.skinTextBox18.IsSystemPasswordChar = false;
-            this.skinTextBox18.Lines = new string[0];
-            this.skinTextBox18.Location = new System.Drawing.Point(547, 161);
-            this.skinTextBox18.Margin = new System.Windows.Forms.Padding(0);
-            this.skinTextBox18.MaxLength = 32767;
-            this.skinTextBox18.MinimumSize = new System.Drawing.Size(28, 28);
-            this.skinTextBox18.MouseBack = null;
-            this.skinTextBox18.MouseState = CCWin.SkinClass.ControlState.Normal;
-            this.skinTextBox18.Multiline = false;
-            this.skinTextBox18.Name = "skinTextBox18";
-            this.skinTextBox18.NormlBack = null;
-            this.skinTextBox18.Padding = new System.Windows.Forms.Padding(5);
-            this.skinTextBox18.ReadOnly = false;
-            this.skinTextBox18.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.skinTextBox18.Size = new System.Drawing.Size(72, 28);
+            this.mubiaokucun_txt.BackColor = System.Drawing.Color.Transparent;
+            this.mubiaokucun_txt.DownBack = null;
+            this.mubiaokucun_txt.Icon = null;
+            this.mubiaokucun_txt.IconIsButton = false;
+            this.mubiaokucun_txt.IconMouseState = CCWin.SkinClass.ControlState.Normal;
+            this.mubiaokucun_txt.IsPasswordChat = '\0';
+            this.mubiaokucun_txt.IsSystemPasswordChar = false;
+            this.mubiaokucun_txt.Lines = new string[0];
+            this.mubiaokucun_txt.Location = new System.Drawing.Point(431, 283);
+            this.mubiaokucun_txt.Margin = new System.Windows.Forms.Padding(0);
+            this.mubiaokucun_txt.MaxLength = 32767;
+            this.mubiaokucun_txt.MinimumSize = new System.Drawing.Size(28, 28);
+            this.mubiaokucun_txt.MouseBack = null;
+            this.mubiaokucun_txt.MouseState = CCWin.SkinClass.ControlState.Normal;
+            this.mubiaokucun_txt.Multiline = false;
+            this.mubiaokucun_txt.Name = "mubiaokucun_txt";
+            this.mubiaokucun_txt.NormlBack = null;
+            this.mubiaokucun_txt.Padding = new System.Windows.Forms.Padding(5);
+            this.mubiaokucun_txt.ReadOnly = false;
+            this.mubiaokucun_txt.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.mubiaokucun_txt.Size = new System.Drawing.Size(188, 28);
             // 
             // 
             // 
-            this.skinTextBox18.SkinTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.skinTextBox18.SkinTxt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinTextBox18.SkinTxt.Font = new System.Drawing.Font("微软雅黑", 9.75F);
-            this.skinTextBox18.SkinTxt.Location = new System.Drawing.Point(5, 5);
-            this.skinTextBox18.SkinTxt.Name = "BaseText";
-            this.skinTextBox18.SkinTxt.Size = new System.Drawing.Size(62, 18);
-            this.skinTextBox18.SkinTxt.TabIndex = 0;
-            this.skinTextBox18.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.skinTextBox18.SkinTxt.WaterText = "";
-            this.skinTextBox18.TabIndex = 17;
-            this.skinTextBox18.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.skinTextBox18.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.skinTextBox18.WaterText = "";
-            this.skinTextBox18.WordWrap = true;
+            this.mubiaokucun_txt.SkinTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mubiaokucun_txt.SkinTxt.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mubiaokucun_txt.SkinTxt.Font = new System.Drawing.Font("微软雅黑", 9.75F);
+            this.mubiaokucun_txt.SkinTxt.Location = new System.Drawing.Point(5, 5);
+            this.mubiaokucun_txt.SkinTxt.Name = "BaseText";
+            this.mubiaokucun_txt.SkinTxt.Size = new System.Drawing.Size(178, 18);
+            this.mubiaokucun_txt.SkinTxt.TabIndex = 0;
+            this.mubiaokucun_txt.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.mubiaokucun_txt.SkinTxt.WaterText = "";
+            this.mubiaokucun_txt.TabIndex = 11;
+            this.mubiaokucun_txt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.mubiaokucun_txt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.mubiaokucun_txt.WaterText = "";
+            this.mubiaokucun_txt.WordWrap = true;
+            // 
+            // shijia_tt3
+            // 
+            this.shijia_tt3.BackColor = System.Drawing.Color.Transparent;
+            this.shijia_tt3.DownBack = null;
+            this.shijia_tt3.Icon = null;
+            this.shijia_tt3.IconIsButton = false;
+            this.shijia_tt3.IconMouseState = CCWin.SkinClass.ControlState.Normal;
+            this.shijia_tt3.IsPasswordChat = '\0';
+            this.shijia_tt3.IsSystemPasswordChar = false;
+            this.shijia_tt3.Lines = new string[0];
+            this.shijia_tt3.Location = new System.Drawing.Point(547, 201);
+            this.shijia_tt3.Margin = new System.Windows.Forms.Padding(0);
+            this.shijia_tt3.MaxLength = 32767;
+            this.shijia_tt3.MinimumSize = new System.Drawing.Size(28, 28);
+            this.shijia_tt3.MouseBack = null;
+            this.shijia_tt3.MouseState = CCWin.SkinClass.ControlState.Normal;
+            this.shijia_tt3.Multiline = false;
+            this.shijia_tt3.Name = "shijia_tt3";
+            this.shijia_tt3.NormlBack = null;
+            this.shijia_tt3.Padding = new System.Windows.Forms.Padding(5);
+            this.shijia_tt3.ReadOnly = false;
+            this.shijia_tt3.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.shijia_tt3.Size = new System.Drawing.Size(72, 28);
+            // 
+            // 
+            // 
+            this.shijia_tt3.SkinTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.shijia_tt3.SkinTxt.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.shijia_tt3.SkinTxt.Font = new System.Drawing.Font("微软雅黑", 9.75F);
+            this.shijia_tt3.SkinTxt.Location = new System.Drawing.Point(5, 5);
+            this.shijia_tt3.SkinTxt.Name = "BaseText";
+            this.shijia_tt3.SkinTxt.Size = new System.Drawing.Size(62, 18);
+            this.shijia_tt3.SkinTxt.TabIndex = 0;
+            this.shijia_tt3.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.shijia_tt3.SkinTxt.WaterText = "";
+            this.shijia_tt3.TabIndex = 17;
+            this.shijia_tt3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.shijia_tt3.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.shijia_tt3.WaterText = "";
+            this.shijia_tt3.WordWrap = true;
+            // 
+            // shiajia_tt1
+            // 
+            this.shiajia_tt1.BackColor = System.Drawing.Color.Transparent;
+            this.shiajia_tt1.DownBack = null;
+            this.shiajia_tt1.Icon = null;
+            this.shiajia_tt1.IconIsButton = false;
+            this.shiajia_tt1.IconMouseState = CCWin.SkinClass.ControlState.Normal;
+            this.shiajia_tt1.IsPasswordChat = '\0';
+            this.shiajia_tt1.IsSystemPasswordChar = false;
+            this.shiajia_tt1.Lines = new string[0];
+            this.shiajia_tt1.Location = new System.Drawing.Point(547, 161);
+            this.shiajia_tt1.Margin = new System.Windows.Forms.Padding(0);
+            this.shiajia_tt1.MaxLength = 32767;
+            this.shiajia_tt1.MinimumSize = new System.Drawing.Size(28, 28);
+            this.shiajia_tt1.MouseBack = null;
+            this.shiajia_tt1.MouseState = CCWin.SkinClass.ControlState.Normal;
+            this.shiajia_tt1.Multiline = false;
+            this.shiajia_tt1.Name = "shiajia_tt1";
+            this.shiajia_tt1.NormlBack = null;
+            this.shiajia_tt1.Padding = new System.Windows.Forms.Padding(5);
+            this.shiajia_tt1.ReadOnly = false;
+            this.shiajia_tt1.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.shiajia_tt1.Size = new System.Drawing.Size(72, 28);
+            // 
+            // 
+            // 
+            this.shiajia_tt1.SkinTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.shiajia_tt1.SkinTxt.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.shiajia_tt1.SkinTxt.Font = new System.Drawing.Font("微软雅黑", 9.75F);
+            this.shiajia_tt1.SkinTxt.Location = new System.Drawing.Point(5, 5);
+            this.shiajia_tt1.SkinTxt.Name = "BaseText";
+            this.shiajia_tt1.SkinTxt.Size = new System.Drawing.Size(62, 18);
+            this.shiajia_tt1.SkinTxt.TabIndex = 0;
+            this.shiajia_tt1.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.shiajia_tt1.SkinTxt.WaterText = "";
+            this.shiajia_tt1.TabIndex = 17;
+            this.shiajia_tt1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.shiajia_tt1.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.shiajia_tt1.WaterText = "";
+            this.shiajia_tt1.WordWrap = true;
             // 
             // skinLabel12
             // 
@@ -1104,46 +1104,46 @@
             this.goods_position_txt.WaterText = "";
             this.goods_position_txt.WordWrap = true;
             // 
-            // skinTextBox20
+            // zuidikuucn_txt
             // 
-            this.skinTextBox20.BackColor = System.Drawing.Color.Transparent;
-            this.skinTextBox20.DownBack = null;
-            this.skinTextBox20.Icon = null;
-            this.skinTextBox20.IconIsButton = false;
-            this.skinTextBox20.IconMouseState = CCWin.SkinClass.ControlState.Normal;
-            this.skinTextBox20.IsPasswordChat = '\0';
-            this.skinTextBox20.IsSystemPasswordChar = false;
-            this.skinTextBox20.Lines = new string[0];
-            this.skinTextBox20.Location = new System.Drawing.Point(431, 333);
-            this.skinTextBox20.Margin = new System.Windows.Forms.Padding(0);
-            this.skinTextBox20.MaxLength = 32767;
-            this.skinTextBox20.MinimumSize = new System.Drawing.Size(28, 28);
-            this.skinTextBox20.MouseBack = null;
-            this.skinTextBox20.MouseState = CCWin.SkinClass.ControlState.Normal;
-            this.skinTextBox20.Multiline = false;
-            this.skinTextBox20.Name = "skinTextBox20";
-            this.skinTextBox20.NormlBack = null;
-            this.skinTextBox20.Padding = new System.Windows.Forms.Padding(5);
-            this.skinTextBox20.ReadOnly = false;
-            this.skinTextBox20.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.skinTextBox20.Size = new System.Drawing.Size(188, 28);
+            this.zuidikuucn_txt.BackColor = System.Drawing.Color.Transparent;
+            this.zuidikuucn_txt.DownBack = null;
+            this.zuidikuucn_txt.Icon = null;
+            this.zuidikuucn_txt.IconIsButton = false;
+            this.zuidikuucn_txt.IconMouseState = CCWin.SkinClass.ControlState.Normal;
+            this.zuidikuucn_txt.IsPasswordChat = '\0';
+            this.zuidikuucn_txt.IsSystemPasswordChar = false;
+            this.zuidikuucn_txt.Lines = new string[0];
+            this.zuidikuucn_txt.Location = new System.Drawing.Point(431, 333);
+            this.zuidikuucn_txt.Margin = new System.Windows.Forms.Padding(0);
+            this.zuidikuucn_txt.MaxLength = 32767;
+            this.zuidikuucn_txt.MinimumSize = new System.Drawing.Size(28, 28);
+            this.zuidikuucn_txt.MouseBack = null;
+            this.zuidikuucn_txt.MouseState = CCWin.SkinClass.ControlState.Normal;
+            this.zuidikuucn_txt.Multiline = false;
+            this.zuidikuucn_txt.Name = "zuidikuucn_txt";
+            this.zuidikuucn_txt.NormlBack = null;
+            this.zuidikuucn_txt.Padding = new System.Windows.Forms.Padding(5);
+            this.zuidikuucn_txt.ReadOnly = false;
+            this.zuidikuucn_txt.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.zuidikuucn_txt.Size = new System.Drawing.Size(188, 28);
             // 
             // 
             // 
-            this.skinTextBox20.SkinTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.skinTextBox20.SkinTxt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinTextBox20.SkinTxt.Font = new System.Drawing.Font("微软雅黑", 9.75F);
-            this.skinTextBox20.SkinTxt.Location = new System.Drawing.Point(5, 5);
-            this.skinTextBox20.SkinTxt.Name = "BaseText";
-            this.skinTextBox20.SkinTxt.Size = new System.Drawing.Size(178, 18);
-            this.skinTextBox20.SkinTxt.TabIndex = 0;
-            this.skinTextBox20.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.skinTextBox20.SkinTxt.WaterText = "";
-            this.skinTextBox20.TabIndex = 12;
-            this.skinTextBox20.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.skinTextBox20.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
-            this.skinTextBox20.WaterText = "";
-            this.skinTextBox20.WordWrap = true;
+            this.zuidikuucn_txt.SkinTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.zuidikuucn_txt.SkinTxt.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.zuidikuucn_txt.SkinTxt.Font = new System.Drawing.Font("微软雅黑", 9.75F);
+            this.zuidikuucn_txt.SkinTxt.Location = new System.Drawing.Point(5, 5);
+            this.zuidikuucn_txt.SkinTxt.Name = "BaseText";
+            this.zuidikuucn_txt.SkinTxt.Size = new System.Drawing.Size(178, 18);
+            this.zuidikuucn_txt.SkinTxt.TabIndex = 0;
+            this.zuidikuucn_txt.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.zuidikuucn_txt.SkinTxt.WaterText = "";
+            this.zuidikuucn_txt.TabIndex = 12;
+            this.zuidikuucn_txt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.zuidikuucn_txt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.zuidikuucn_txt.WaterText = "";
+            this.zuidikuucn_txt.WordWrap = true;
             // 
             // modify_date_dt
             // 
@@ -1159,15 +1159,18 @@
             this.modify_date_dt.TabIndex = 31;
             this.modify_date_dt.text = "";
             // 
-            // skinComboBox1
+            // jinyong_cmb
             // 
-            this.skinComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.skinComboBox1.FormattingEnabled = true;
-            this.skinComboBox1.Location = new System.Drawing.Point(431, 459);
-            this.skinComboBox1.Name = "skinComboBox1";
-            this.skinComboBox1.Size = new System.Drawing.Size(188, 22);
-            this.skinComboBox1.TabIndex = 32;
-            this.skinComboBox1.WaterText = "";
+            this.jinyong_cmb.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.jinyong_cmb.FormattingEnabled = true;
+            this.jinyong_cmb.Items.AddRange(new object[] {
+            "正常",
+            "禁用"});
+            this.jinyong_cmb.Location = new System.Drawing.Point(431, 459);
+            this.jinyong_cmb.Name = "jinyong_cmb";
+            this.jinyong_cmb.Size = new System.Drawing.Size(188, 22);
+            this.jinyong_cmb.TabIndex = 32;
+            this.jinyong_cmb.WaterText = "";
             // 
             // skinButton1
             // 
@@ -1203,6 +1206,16 @@
             // 
             this.goods_type_txt.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.goods_type_txt.FormattingEnabled = true;
+            this.goods_type_txt.Items.AddRange(new object[] {
+            "书",
+            "音乐",
+            "电影",
+            "手机",
+            "笔记本电脑",
+            "数码相机",
+            "数码摄像机",
+            "化妆品",
+            "精品手机"});
             this.goods_type_txt.Location = new System.Drawing.Point(85, 251);
             this.goods_type_txt.Name = "goods_type_txt";
             this.goods_type_txt.Size = new System.Drawing.Size(188, 22);
@@ -1217,9 +1230,9 @@
             this.Controls.Add(this.goods_type_txt);
             this.Controls.Add(this.skinButton2);
             this.Controls.Add(this.skinButton1);
-            this.Controls.Add(this.skinComboBox1);
+            this.Controls.Add(this.jinyong_cmb);
             this.Controls.Add(this.modify_date_dt);
-            this.Controls.Add(this.skinTextBox20);
+            this.Controls.Add(this.zuidikuucn_txt);
             this.Controls.Add(this.goods_position_txt);
             this.Controls.Add(this.skinLabel23);
             this.Controls.Add(this.skinLabel22);
@@ -1233,14 +1246,14 @@
             this.Controls.Add(this.skinLabel14);
             this.Controls.Add(this.skinLabel13);
             this.Controls.Add(this.skinLabel12);
-            this.Controls.Add(this.skinTextBox18);
-            this.Controls.Add(this.skinTextBox17);
-            this.Controls.Add(this.skinTextBox16);
-            this.Controls.Add(this.skinTextBox15);
-            this.Controls.Add(this.skinTextBox12);
-            this.Controls.Add(this.skinTextBox13);
+            this.Controls.Add(this.shiajia_tt1);
+            this.Controls.Add(this.shijia_tt3);
+            this.Controls.Add(this.mubiaokucun_txt);
+            this.Controls.Add(this.shiajia_tt);
+            this.Controls.Add(this.shijia3_txt);
+            this.Controls.Add(this.shaijia1_txt);
             this.Controls.Add(this.jinjie_txt);
-            this.Controls.Add(this.skinTextBox11);
+            this.Controls.Add(this.shiaji2_txt);
             this.Controls.Add(this.rank_txt);
             this.Controls.Add(this.gonghuo_txt);
             this.Controls.Add(this.beizhu_txt);
@@ -1293,14 +1306,14 @@
         private CCWin.SkinControl.SkinTextBox beizhu_txt;
         private CCWin.SkinControl.SkinTextBox rank_txt;
         private CCWin.SkinControl.SkinTextBox gonghuo_txt;
-        private CCWin.SkinControl.SkinTextBox skinTextBox11;
-        private CCWin.SkinControl.SkinTextBox skinTextBox12;
-        private CCWin.SkinControl.SkinTextBox skinTextBox13;
+        private CCWin.SkinControl.SkinTextBox shiaji2_txt;
+        private CCWin.SkinControl.SkinTextBox shijia3_txt;
+        private CCWin.SkinControl.SkinTextBox shaijia1_txt;
         private CCWin.SkinControl.SkinTextBox jinjie_txt;
-        private CCWin.SkinControl.SkinTextBox skinTextBox15;
-        private CCWin.SkinControl.SkinTextBox skinTextBox16;
-        private CCWin.SkinControl.SkinTextBox skinTextBox17;
-        private CCWin.SkinControl.SkinTextBox skinTextBox18;
+        private CCWin.SkinControl.SkinTextBox shiajia_tt;
+        private CCWin.SkinControl.SkinTextBox mubiaokucun_txt;
+        private CCWin.SkinControl.SkinTextBox shijia_tt3;
+        private CCWin.SkinControl.SkinTextBox shiajia_tt1;
         private CCWin.SkinControl.SkinLabel skinLabel12;
         private CCWin.SkinControl.SkinLabel skinLabel13;
         private CCWin.SkinControl.SkinLabel skinLabel14;
@@ -1314,9 +1327,9 @@
         private CCWin.SkinControl.SkinLabel skinLabel22;
         private CCWin.SkinControl.SkinLabel skinLabel23;
         private CCWin.SkinControl.SkinTextBox goods_position_txt;
-        private CCWin.SkinControl.SkinTextBox skinTextBox20;
+        private CCWin.SkinControl.SkinTextBox zuidikuucn_txt;
         private CCWin.SkinControl.SkinDateTimePicker modify_date_dt;
-        private CCWin.SkinControl.SkinComboBox skinComboBox1;
+        private CCWin.SkinControl.SkinComboBox jinyong_cmb;
         private CCWin.SkinControl.SkinButton skinButton1;
         private CCWin.SkinControl.SkinButton skinButton2;
         private CCWin.SkinControl.SkinComboBox goods_type_txt;
