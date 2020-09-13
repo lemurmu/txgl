@@ -190,7 +190,7 @@ namespace LCSClientApplication.Controls
             mubiaokucun_txt.Text=articulo.kucun.ToString();
             zuidikuucn_txt.Text=articulo.kucun2.ToString();
             goods_position_txt.Text=articulo.weizhi;
-            modify_date_dt.Text=articulo.riqi.ToString();
+            modify_date_dt.Text=DateTime.Now.ToString("yyyy-MM-dd HH:MM:ss");
             jinyong_cmb.SelectedIndex=articulo.jinyong;//0正常 1禁用
         }
     }
