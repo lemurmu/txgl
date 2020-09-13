@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Library.DataAccess;
+using SqlSugar;
+using System;
 using System.Linq;
 using System.Text;
 
@@ -7,18 +9,21 @@ namespace Lcs.Entity
     ///<summary>
     ///
     ///</summary>
+    [SugarTable("articulo")]
     public partial class articulo
     {
            public articulo(){
 
 
            }
-           /// <summary>
-           /// Desc:
-           /// Default:
-           /// Nullable:False
-           /// </summary>           
-           public int id {get;set;}
+        /// <summary>
+        /// Desc:
+        /// Default:
+        /// Nullable:False
+        /// </summary>  
+        //指定主键和自增列，当然数据库中也要设置主键和自增列才会有效
+        [SugarColumn(IsPrimaryKey = true, IsIdentity = true)]
+        public int id {get;set;}
 
            /// <summary>
            /// Desc:

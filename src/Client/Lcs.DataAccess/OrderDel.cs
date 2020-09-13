@@ -16,12 +16,15 @@ namespace Lcs.DataAccess
         /// <returns></returns>
         public List<pedidokehu> GetHistoricalOrders()
         {
-            const string sql = "select bianhao,fecha_c,beizhu,name,lianxiren,rate from pedidokehu";
-            using (var con = DbConfig.GetConnection())
-            {
-                return con.Query<pedidokehu>(sql)
-                    .ToList();
-            }
+            //const string sql = "select bianhao,fecha_c,beizhu,name,lianxiren,rate from pedidokehu";
+           
+            //using (var con = DbConfig.GetConnection())
+            //{
+            //    return con.Query<pedidokehu>(sql)
+            //        .ToList();
+            //}
+
+            return DbConfig.DB.Queryable<pedidokehu>().ToList();
         }
 
 

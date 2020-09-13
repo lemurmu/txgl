@@ -28,6 +28,7 @@ using System.Text;
 using System.Windows.Forms;
 using CCWin.SkinControl;
 using LCSClientApplication.Forms;
+using Lcs.Entity;
 
 namespace LCSClientApplication
 {

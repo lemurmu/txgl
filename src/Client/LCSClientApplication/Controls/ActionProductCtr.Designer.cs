@@ -1278,6 +1278,7 @@
             this.MaximizeBox = false;
             this.Name = "ActionProductCtr";
             this.Text = "";
+            this.Load += new System.EventHandler(this.ActionProductCtr_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

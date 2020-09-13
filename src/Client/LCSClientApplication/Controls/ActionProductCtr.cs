@@ -37,10 +37,16 @@ namespace LCSClientApplication.Controls
 
         private void skinButton1_Click(object sender, EventArgs e)
         {
+            Exexute();
+        }
+
+        void Exexute()
+        {
             JObject goods = new JObject();
             articulo articulo = new articulo();
             try
             {
+
                 string goodNum = goods_id_txt.Text;
                 string tiaoxing = goods_thumb_txt.Text;
                 string zhcName = zh_name_txt.Text;
@@ -87,6 +93,15 @@ namespace LCSClientApplication.Controls
                 articulo.riqi = DateTime.Now;
                 articulo.fecha = DateTime.Parse(modifyDate);
                 articulo.jinyong = jinyong;
+                articulo.codigoAnte = " ";
+                articulo.muluID = "020";
+                articulo.subMuluID = " ";
+                articulo.changjia = " ";
+                articulo.kucunWeizhi = "";
+                articulo.max = 0;
+                articulo.min = 0;
+                articulo.attributes = "";
+                articulo.beizhu2 = "";
 
                 //同步到云端API的JSON数据
                 goods["goodsNum"] = goodNum;//产品编号
@@ -103,7 +118,15 @@ namespace LCSClientApplication.Controls
             //产品信息保存到本地
             try
             {
-                goodsDel.Insert(articulo);
+                if (actoinType == ActoinType.add)
+                {
+                    goodsDel.Insert(articulo);
+                }
+                else if (actoinType == ActoinType.modify)
+                {
+                    goodsDel.UpDate(articulo);
+                }
+            
             }
             catch (Exception ex)
             {
@@ -120,13 +143,11 @@ namespace LCSClientApplication.Controls
                 if (actoinType == ActoinType.add)
                 {
                     api = "/api/Goods/insert";
-
                 }
                 else if (actoinType == ActoinType.modify)
                 {
                     api = "/api/Goods/update";
                 }
-
                 var request = new RestRequest(api, Method.POST);
                 request.AddHeader("Content-Type", "application/json");
                 request.AddJsonBody(goods);
@@ -141,8 +162,38 @@ namespace LCSClientApplication.Controls
             }
         }
 
-    }
+        private void ActionProductCtr_Load(object sender, EventArgs e)
+        {
 
+          
+        }
+
+        public void SetGoodTextValue(articulo articulo)
+        {
+            goods_id_txt.Text = articulo.bianhao;
+            goods_thumb_txt.Text= articulo.codigo;
+            zh_name_txt.Text=articulo.namecn;
+            en_name_txt.Text=articulo.namees;
+            baozhuang_num_txt.Text=articulo.baozhuangshu.ToString();
+            zhaungxiang_num_txt.Text=articulo.zhuangxiangshu.ToString();
+            gonghuo_txt.Text=articulo.py;
+            rank_txt.Text=articulo.px.ToString();
+            goods_type_txt.SelectedIndex=1;
+            beizhu_txt.Text=articulo.beizhu;
+            jinjie_txt.Text=articulo.jinjia.ToString();
+            shaijia1_txt.Text=articulo.maijia.ToString();
+            shiajia_tt.Text=articulo.des.ToString();
+            shiaji2_txt.Text=articulo.maijia2.ToString();
+            shiajia_tt1.Text=articulo.des2.ToString();
+            shijia3_txt.Text=articulo.maijia3.ToString();
+            shijia_tt3.Text=articulo.des3.ToString();
+            mubiaokucun_txt.Text=articulo.kucun.ToString();
+            zuidikuucn_txt.Text=articulo.kucun2.ToString();
+            goods_position_txt.Text=articulo.weizhi;
+            modify_date_dt.Text=articulo.riqi.ToString();
+            jinyong_cmb.SelectedIndex=articulo.jinyong;//0正常 1禁用
+        }
+    }
     public enum ActoinType
     {
         add = 0,
@@ -150,3 +201,8 @@ namespace LCSClientApplication.Controls
 
     }
 }
+
+
+
+
+

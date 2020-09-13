@@ -1,6 +1,7 @@
 ﻿using CCWin;
 using Lcs.DataAccess;
 using Lcs.Entity;
+using LcsClient;
 using LCSClientApplication.CommonToolKit;
 using LCSClientApplication.Controls;
 using System;
@@ -24,13 +25,13 @@ namespace LCSClientApplication.Forms
         }
 
         GoodsDel goodsDel = new GoodsDel();
-        List<articulo> Goods;
+        private List<articulo> Goods { set; get; }
 
         private void InitGrid()
         {
             product_grid.Columns.AddRange(new DataGridViewColumn[] {
                 new DataGridViewCheckBoxColumn{Name="status",HeaderText="可用",DataPropertyName="status",ValueType=typeof(bool)},
-                new DataGridViewImageColumn{Name="image",HeaderText="图片",DataPropertyName="image",ValueType=typeof(Image)},
+                new DataGridViewImageColumn{Name="image",HeaderText="图片",DataPropertyName="image",ValueType=typeof(Image),AutoSizeMode=DataGridViewAutoSizeColumnMode.Fill},
                 new DataGridViewTextBoxColumn{Name="weizhi",HeaderText="位置",DataPropertyName="weizhi",ValueType=typeof(string)},
                 new DataGridViewTextBoxColumn{Name="bianhao",HeaderText="编号",DataPropertyName="bianhao",ValueType=typeof(string)},
                 new DataGridViewTextBoxColumn{Name="tiaoxing",HeaderText="条形",DataPropertyName="tiaoxing",ValueType=typeof(string)},
@@ -63,8 +64,10 @@ namespace LCSClientApplication.Forms
                     //dataGridViewRow.Cells["shijia"].Value = item.maijia;
                     //dataGridViewRow.Cells["kucun"].Value = item.kucun;
                     //dataGridViewRow.Cells["beizhu"].Value = item.beizhu;
-                    product_grid.Rows.Add(item.status == 0 ? true : false, Image.FromFile(@"Images\logo.jpg"),item.weizhi,
-                        item.bianhao, item.codigo, item.namecn, item.baozhuangshu, item.zhuangxiangshu,item.maijia, item.kucun, item.beizhu);
+                    Image image = Image.FromFile(@"Images\1.png");
+                    product_grid.RowTemplate.Height = image.Height;
+                    product_grid.Rows.Add(item.status == 0 ? true : false, image, item.weizhi,
+                        item.bianhao, item.codigo, item.namecn, item.baozhuangshu, item.zhuangxiangshu, item.maijia, item.kucun, item.beizhu);
                 }
             }
             catch (Exception ex)
@@ -78,7 +81,7 @@ namespace LCSClientApplication.Forms
 
         }
 
-        private void skinButton1_Click(object sender, EventArgs e)
+        private void skinButton12_Click(object sender, EventArgs e)
         {
             ActionProductCtr addProductCtr = new ActionProductCtr(ActoinType.add);
             addProductCtr.StartPosition = FormStartPosition.CenterScreen;
@@ -87,20 +90,37 @@ namespace LCSClientApplication.Forms
             addProductCtr.ShowDialog();
         }
 
-        private void skinButton3_Click(object sender, EventArgs e)
+        private void skinButton5_Click(object sender, EventArgs e)
         {
             ActionProductCtr addProductCtr = new ActionProductCtr(ActoinType.modify);
             addProductCtr.StartPosition = FormStartPosition.CenterScreen;
             addProductCtr.Text = "修改产品";
             addProductCtr.Icon = this.Icon;
+
+            DataGridViewRow gridViewRow = product_grid.CurrentRow;
+            addProductCtr.SetGoodTextValue(Goods[gridViewRow.Index]);
+
             addProductCtr.ShowDialog();
         }
 
-        private void skinButton2_Click(object sender, EventArgs e)
+        private void skinButton4_Click(object sender, EventArgs e)
         {
             if (DialogResult.OK == MessageBox.Show("确定删除选中行？", "提示", MessageBoxButtons.OKCancel, MessageBoxIcon.Question))
             {
-                DataGridViewRow gridViewRow = product_grid.CurrentRow;
+                try
+                {
+                    DataGridViewRow gridViewRow = product_grid.CurrentRow;
+                    goodsDel.Delete(Goods[gridViewRow.Index].id);
+                    Goods.Remove(Goods[gridViewRow.Index]);
+                    product_grid.Rows.Remove(gridViewRow);
+                    MessageBox.Show("删除成功！");
+                }
+                catch (Exception ex)
+                {
+                    Logger.Error(ex);
+                    MessageBox.Show("删除失败！");
+                }
+
             }
         }
     }
