@@ -9,11 +9,20 @@ namespace LCSClientApplication
 {
     public static class Globle
     {
+        /// <summary>
+        /// webApi路径
+        /// </summary>
         public static string ClouldWebAPI = ConfigurationManager.AppSettings["ClouldWebAPI"];
 
+        /// <summary>
+        /// 全局config文件路径
+        /// </summary>
+        public static string ConfigFile = @"Config\config.ini";
 
-
-
+        /// <summary>
+        /// 全局config对象
+        /// </summary>
+        public static IniConfigHelper.IniConfigHelper IniConfig = new IniConfigHelper.IniConfigHelper(ConfigFile);
 
     }
 }

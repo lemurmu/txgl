@@ -1,14 +1,18 @@
 ﻿using CCWin;
+using CCWin.SkinControl;
+using gregn6Lib;
 using Lcs.DataAccess;
 using Lcs.Entity;
 using LcsClient;
 using LCSClientApplication.CommonToolKit;
 using LCSClientApplication.Controls;
+using PagerLib;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,9 +26,25 @@ namespace LCSClientApplication.Forms
         {
             InitializeComponent();
             InitGrid();
+            LoadGoodsImageFiles();
+
+            pagerControl = new PagerControl();
+            pagerControl.Parent = skinPanel;
+            pagerControl.Dock = DockStyle.Fill;
+            pagerControl.PageChange += PagerControlTest_PageChange;
+            pagerControl.PageChangeWithObject += PagerControlTest_PageChangeWithObject;
+            skinPanel.Controls.Add(pagerControl);
+
+            report_cmb.SelectedIndex = 0;
+            // leibie_cmb.SelectedIndex = 0;
+            jinyong_cmb.SelectedIndex = 0;
+            maijia_cmb.SelectedIndex = 0;
         }
 
         GoodsDel goodsDel = new GoodsDel();
+        PagerControl pagerControl;
+        GridppReport Report;
+
         private List<articulo> Goods { set; get; }
 
         private void InitGrid()
@@ -44,40 +64,28 @@ namespace LCSClientApplication.Forms
             });
         }
 
+        private void LoadGoodsImageFiles()
+        {
+            string folder = Globle.IniConfig["GoodsImageFilePath"]["imagefile"];
+            if (!Directory.Exists(folder))
+            {
+                return;
+            }
+            DirectoryInfo theFolder = new DirectoryInfo(folder);
+            DirectoryInfo[] dirInfo = theFolder.GetDirectories();
+            foreach (DirectoryInfo Imagefoler in dirInfo)
+            {
+                leibie_cmb.Items.Add(Imagefoler.Name);
+            }
+            leibie_cmb.SelectedIndex = 0;
+        }
+
         private void FrmProductManage_Load(object sender, EventArgs e)
         {
-            SplashScreenHelper.ShowLoadingScreen();
-            Goods = goodsDel.GetGoodsList();
-            try
-            {
-                foreach (var item in Goods)
-                {
-                    //DataGridViewRow dataGridViewRow = new DataGridViewRow();
-                    //dataGridViewRow.Cells["status"].Value = ;
-                    //dataGridViewRow.Cells["image"].Value = ;
-                    //dataGridViewRow.Cells["weizhi"].Value = ;
-                    //dataGridViewRow.Cells["bianhao"].Value = ;
-                    //dataGridViewRow.Cells["tiaoxing"].Value = ;
-                    //dataGridViewRow.Cells["zhongwenpingming"].Value = item.namecn;
-                    //dataGridViewRow.Cells["baozhuangshu"].Value = item.baozhuangshu;
-                    //dataGridViewRow.Cells["zhuangxiangshu"].Value = item.zhuangxiangshu;
-                    //dataGridViewRow.Cells["shijia"].Value = item.maijia;
-                    //dataGridViewRow.Cells["kucun"].Value = item.kucun;
-                    //dataGridViewRow.Cells["beizhu"].Value = item.beizhu;
-                    Image image = Image.FromFile(@"Images\1.png");
-                    product_grid.RowTemplate.Height = image.Height;
-                    product_grid.Rows.Add(item.status == 0 ? true : false, image, item.weizhi,
-                        item.bianhao, item.codigo, item.namecn, item.baozhuangshu, item.zhuangxiangshu, item.maijia, item.kucun, item.beizhu);
-                }
-            }
-            catch (Exception ex)
-            {
-
-            }
-            finally
-            {
-                SplashScreenHelper.CloseForm();
-            }
+            //设置当前页
+            pagerControl.CurrentPage = 1;
+            //设置每页显示的记录数
+            pagerControl.RowsPerPage = 10;
 
         }
 
@@ -123,5 +131,134 @@ namespace LCSClientApplication.Forms
 
             }
         }
+
+        #region 分页
+        /// <summary>
+        /// 事件处理
+        /// </summary>
+        /// <param name="obj"></param>
+        void PagerControlTest_PageChangeWithObject(object obj)
+        {
+            PagerLib.PagerControl pager = obj as PagerLib.PagerControl;
+            //if (pager != null)
+            //{
+            //    Console.WriteLine(pager.Name);
+            //}
+        }
+
+        /// <summary>
+        /// 事件处理
+        /// </summary>
+        void PagerControlTest_PageChange()
+        {
+            GetSource();
+        }
+
+        /// <summary>
+        /// 处理分页
+        /// </summary>
+        private void GetSource()
+        {
+            SplashScreenHelper.ShowLoadingScreen();
+            //获得当前页
+            int cur = pagerControl.CurrentPage;
+            //获得每页显示的记录数
+            int rows = pagerControl.RowsPerPage;
+            int totalCount = 10;
+
+            Goods = goodsDel.PageQuery(cur, rows, ref totalCount);
+            pagerControl.RecordCount = totalCount;
+            pagerControl.TotalPage = totalCount / pagerControl.RowsPerPage + 1;
+            try
+            {
+                product_grid.Rows.Clear();
+                foreach (var item in Goods)
+                {
+                    Image image = Image.FromFile(@"Images\1.png");
+                    product_grid.RowTemplate.Height = image.Height;
+                    product_grid.Rows.Add(item.status == 0 ? true : false, image, item.weizhi,
+                        item.bianhao, item.codigo, item.namecn, item.baozhuangshu, item.zhuangxiangshu, item.maijia, item.kucun, item.beizhu);
+                }
+            }
+            catch (Exception ex)
+            {
+                Logger.Error(ex);
+            }
+            finally
+            {
+                SplashScreenHelper.CloseForm();
+            }
+        }
+        #endregion
+
+        private void skinButton1_Click(object sender, EventArgs e)
+        {
+            string quetyStr = query_txt.Text;
+            if (quetyStr.IsNullOrEmpty())
+            {
+                MessageBox.Show("查询条件为空！");
+                return;
+            }
+            try
+            {
+                //linq模糊查询语句
+                var query = from x in Goods
+                            let temp = Goods.Select(t => new
+                            {
+                                ID = t.id,
+                                all = t.id + "," + t.weizhi + "," + t.bianhao + "," + t.codigo + "," +
+                            t.namecn + "," + t.baozhuangshu + "," + t.zhuangxiangshu + "," + t.maijia + "," + t.kucun + "," + t.beizhu
+                            })
+                            .Where(t => t.all.Contains(quetyStr)).Select(t => t.ID)
+                            where temp.Contains(x.id)
+                            select x;
+                List<articulo> articulos = query.ToList();
+                product_grid.Rows.Clear();
+                foreach (var item in articulos)
+                {
+                    Image image = Image.FromFile(@"Images\1.png");
+                    product_grid.RowTemplate.Height = image.Height;
+                    product_grid.Rows.Add(item.status == 0 ? true : false, image, item.weizhi,
+                        item.bianhao, item.codigo, item.namecn, item.baozhuangshu, item.zhuangxiangshu, item.maijia, item.kucun, item.beizhu);
+                }
+            }
+            catch (Exception ex)
+            {
+                Logger.Error("模糊查询错误:" + ex.Message);
+            }
+
+
+        }
+
+        /// <summary>
+        /// 导出预览
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void skinButton2_Click(object sender, EventArgs e)
+        {
+            if (Goods == null)
+            {
+                MessageBox.Show("无产品数据！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            //从对应文件中载入报表模板数据
+            Report = new GridppReport();
+            // Report.DetailGrid.Recordset.ConnectionString = GridppReportDemo.Utility.GetDatabaseConnectionString();
+            //Report.ExportBegin += new _IGridppReportEvents_ExportBeginEventHandler(ReportExportBegin);
+            string reportPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Grid\\产品管理列表.grf");
+            Report.LoadFromFile(reportPath);
+            Report.FetchRecord += ReportList_FetchRecord;
+
+            Report.PrintPreview(true);
+        }
+
+        private void ReportList_FetchRecord()
+        {
+            GridReportHelper.FillRecordToReport<articulo>(Report, Goods);
+        }
+
     }
+
+
 }

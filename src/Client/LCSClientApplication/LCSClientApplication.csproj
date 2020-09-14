@@ -141,6 +141,9 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="Config\config.ini">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="Config\log4net.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -178,6 +181,14 @@
     <None Include="Resources\1.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Platform\IniConfigHelper\IniConfigHelper.csproj">
+      <Project>{7abe0735-1ba6-4ca7-98bf-32517c8ab645}</Project>
+      <Name>IniConfigHelper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Platform\PagerLib\PagerLib.csproj">
+      <Project>{dfc93a92-d0b6-4fd0-b3b9-612593c8c7d2}</Project>
+      <Name>PagerLib</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Lcs.DataAccess\Lcs.DataAccess.csproj">
       <Project>{D140F074-0D57-4F6D-9769-A6B0B5C865A9}</Project>
       <Name>Lcs.DataAccess</Name>

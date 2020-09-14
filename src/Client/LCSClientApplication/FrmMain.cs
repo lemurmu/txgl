@@ -88,5 +88,14 @@ namespace LCSClientApplication
             frmProductManage.Show();
         }
 
+        /// <summary>
+        /// 资料导入
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void skinTabPage2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

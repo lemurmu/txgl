@@ -59,6 +59,19 @@ namespace Lcs.DataAccess
             return DbConfig.DB.Queryable<articulo>().Where(T => T.id == id).ToList()[0];
         }
 
+        /// <summary>
+        /// 分页查询
+        /// </summary>
+        /// <param name="pageIndex"></param>
+        /// <param name="pageSize"></param>
+        /// <param name="totalCount"></param>
+        /// <returns></returns>
+        public List<articulo> PageQuery(int pageIndex, int pageSize, ref int totalCount)
+        {
+            return DbConfig.DB.Queryable<articulo>().OrderBy(it => it.id).ToPageList(pageIndex, pageSize, ref totalCount);
+
+        }
+
         public int Insert(articulo lcs_Goods)
         {
             //            const string sql = "INSERT INTO lcs_goods (codigo,bianhao,codigoAnte,multi,namecn,namees,py,muluID,subMuluID,jinjia,maijia,maijia2,maijia3,des,des2,des3,changjia," +
