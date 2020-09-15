@@ -167,6 +167,7 @@ namespace LCSClientApplication
             this.tabShow.Size = new System.Drawing.Size(982, 73);
             this.tabShow.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabShow.TabIndex = 140;
+            this.tabShow.SelectedIndexChanged += new System.EventHandler(this.tabShow_SelectedIndexChanged);
             // 
             // tabPageEx6
             // 
@@ -208,7 +209,7 @@ namespace LCSClientApplication
             this.skinTabPage1.Location = new System.Drawing.Point(0, 70);
             this.skinTabPage1.Margin = new System.Windows.Forms.Padding(0);
             this.skinTabPage1.Name = "skinTabPage1";
-            this.skinTabPage1.Size = new System.Drawing.Size(982, 25);
+            this.skinTabPage1.Size = new System.Drawing.Size(982, 3);
             this.skinTabPage1.TabIndex = 7;
             this.skinTabPage1.TabItemImage = null;
             this.skinTabPage1.Text = "产品管理";
@@ -241,7 +242,6 @@ namespace LCSClientApplication
             this.skinTabPage2.TabIndex = 8;
             this.skinTabPage2.TabItemImage = null;
             this.skinTabPage2.Text = "资料导入";
-            this.skinTabPage2.Click += new System.EventHandler(this.skinTabPage2_Click);
             // 
             // skinLabel3
             // 

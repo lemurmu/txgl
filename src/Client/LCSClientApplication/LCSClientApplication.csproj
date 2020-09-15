@@ -77,6 +77,42 @@
     <Compile Include="Controls\ActionProductCtr.Designer.cs">
       <DependentUpon>ActionProductCtr.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\ExcelImportCtr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\ExcelImportCtr.Designer.cs">
+      <DependentUpon>ExcelImportCtr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmExcelGuidSaveDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmExcelGuidSaveDB.Designer.cs">
+      <DependentUpon>FrmExcelGuidSaveDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmExcelImportGuid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmExcelImportGuid.Designer.cs">
+      <DependentUpon>FrmExcelImportGuid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmExcelImportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmExcelImportView.Designer.cs">
+      <DependentUpon>FrmExcelImportView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmExcelSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmExcelSelect.designer.cs">
+      <DependentUpon>FrmExcelSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmExcelSelectSheet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmExcelSelectSheet.designer.cs">
+      <DependentUpon>FrmExcelSelectSheet.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmHistotyOrder.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,11 +151,26 @@
     </Compile>
     <Compile Include="CommonToolKit\GridppReport.cs" />
     <Compile Include="CommonToolKit\Logger.cs" />
-    <Compile Include="Globle.cs" />
+    <Compile Include="Global.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Controls\ActionProductCtr.resx">
       <DependentUpon>ActionProductCtr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmExcelGuidSaveDB.resx">
+      <DependentUpon>FrmExcelGuidSaveDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmExcelImportGuid.resx">
+      <DependentUpon>FrmExcelImportGuid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmExcelImportView.resx">
+      <DependentUpon>FrmExcelImportView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmExcelSelect.resx">
+      <DependentUpon>FrmExcelSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmExcelSelectSheet.resx">
+      <DependentUpon>FrmExcelSelectSheet.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmHistotyOrder.resx">
       <DependentUpon>FrmHistotyOrder.cs</DependentUpon>
@@ -168,6 +219,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
+    <Content Include="tubiao\db.jpg" />
     <Content Include="tubiao\产品资料.png" />
     <Content Include="tubiao\基础资料.png" />
     <Content Include="tubiao\库存查询.png" />
@@ -181,6 +233,10 @@
     <None Include="Resources\1.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Platform\ExcelLib\ExcelLib.csproj">
+      <Project>{d8d2e7bf-d87a-4dd8-9bbc-2e4039cf21a2}</Project>
+      <Name>ExcelLib</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Platform\IniConfigHelper\IniConfigHelper.csproj">
       <Project>{7abe0735-1ba6-4ca7-98bf-32517c8ab645}</Project>
       <Name>IniConfigHelper</Name>

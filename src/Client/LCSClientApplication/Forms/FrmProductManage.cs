@@ -66,7 +66,7 @@ namespace LCSClientApplication.Forms
 
         private void LoadGoodsImageFiles()
         {
-            string folder = Globle.IniConfig["GoodsImageFilePath"]["imagefile"];
+            string folder = Global.IniConfig["GoodsImageFilePath"]["imagefile"];
             if (!Directory.Exists(folder))
             {
                 return;
@@ -258,6 +258,33 @@ namespace LCSClientApplication.Forms
             GridReportHelper.FillRecordToReport<articulo>(Report, Goods);
         }
 
+        private void jinyong_cmb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            List<articulo> articulos = null;
+            switch (jinyong_cmb.SelectedIndex)
+            {
+                case 0://全部产品
+                    articulos = Goods;
+                    break;
+                case 1://未禁用
+                   articulos= Goods.Where(t => t.status == 0).ToList();
+                    break;
+                case 2://禁用
+                    articulos= Goods.Where(t => t.status != 0).ToList();
+                    break;
+                default:
+                    break;
+            }
+            if (articulos == null) { return; }
+            product_grid.Rows.Clear();
+            foreach (var item in articulos)
+            {
+                Image image = Image.FromFile(@"Images\1.png");
+                product_grid.RowTemplate.Height = image.Height;
+                product_grid.Rows.Add(item.status == 0 ? true : false, image, item.weizhi,
+                    item.bianhao, item.codigo, item.namecn, item.baozhuangshu, item.zhuangxiangshu, item.maijia, item.kucun, item.beizhu);
+            }
+        }
     }
 
 

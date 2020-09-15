@@ -41,6 +41,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PagerLib", "Platform\PagerL
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IniConfigHelper", "Platform\IniConfigHelper\IniConfigHelper.csproj", "{7ABE0735-1BA6-4CA7-98BF-32517C8AB645}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelLib", "Platform\ExcelLib\ExcelLib.csproj", "{D8D2E7BF-D87A-4DD8-9BBC-2E4039CF21A2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -161,6 +163,14 @@ Global
 		{7ABE0735-1BA6-4CA7-98BF-32517C8AB645}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7ABE0735-1BA6-4CA7-98BF-32517C8AB645}.Release|x86.ActiveCfg = Release|Any CPU
 		{7ABE0735-1BA6-4CA7-98BF-32517C8AB645}.Release|x86.Build.0 = Release|Any CPU
+		{D8D2E7BF-D87A-4DD8-9BBC-2E4039CF21A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8D2E7BF-D87A-4DD8-9BBC-2E4039CF21A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8D2E7BF-D87A-4DD8-9BBC-2E4039CF21A2}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D8D2E7BF-D87A-4DD8-9BBC-2E4039CF21A2}.Debug|x86.Build.0 = Debug|Any CPU
+		{D8D2E7BF-D87A-4DD8-9BBC-2E4039CF21A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8D2E7BF-D87A-4DD8-9BBC-2E4039CF21A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8D2E7BF-D87A-4DD8-9BBC-2E4039CF21A2}.Release|x86.ActiveCfg = Release|Any CPU
+		{D8D2E7BF-D87A-4DD8-9BBC-2E4039CF21A2}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -181,6 +191,7 @@ Global
 		{55C0CD3C-F6B3-4A7B-B824-2D7D89F2E0A9} = {A3D4F490-74F5-4CC6-AF54-7FE6169B51A6}
 		{DFC93A92-D0B6-4FD0-B3B9-612593C8C7D2} = {65F3F5EE-7211-48ED-8395-0BFC3A1A3FF3}
 		{7ABE0735-1BA6-4CA7-98BF-32517C8AB645} = {65F3F5EE-7211-48ED-8395-0BFC3A1A3FF3}
+		{D8D2E7BF-D87A-4DD8-9BBC-2E4039CF21A2} = {65F3F5EE-7211-48ED-8395-0BFC3A1A3FF3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {82464139-51F9-4CA5-982E-CC1210BA97C5}

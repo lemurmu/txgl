@@ -39,7 +39,7 @@ namespace LCSClientApplication
             InitializeComponent();
             func_tab.SelectedIndex = 0;
             timer1.Start();
-           // Init();
+            // Init();
         }
 
         //void Init()
@@ -88,14 +88,18 @@ namespace LCSClientApplication
             frmProductManage.Show();
         }
 
-        /// <summary>
-        /// 资料导入
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void skinTabPage2_Click(object sender, EventArgs e)
+       
+        private void tabShow_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            switch (tabShow.SelectedIndex)
+            {
+                case 2:
+                    FrmExcelImportGuid frmGuid1 = new FrmExcelImportGuid();
+                    frmGuid1.Show();
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }

@@ -138,7 +138,7 @@ namespace LCSClientApplication.Controls
             //同步到云数据库
             try
             {
-                var restclient = new RestClient(Globle.ClouldWebAPI);
+                var restclient = new RestClient(Global.ClouldWebAPI);
                 string api = "";
                 if (actoinType == ActoinType.add)
                 {
