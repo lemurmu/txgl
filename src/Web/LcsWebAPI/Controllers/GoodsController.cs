@@ -39,12 +39,12 @@ namespace LcsWebAPI.Controllers
         {
             try
             {
-                _context.LcsGoods.Add(new LcsGoods
-                {
+                //_context.LcsGoods.Add(new LcsGoods
+                //{
                    
 
 
-                });
+                //});
                 _logger.LogInformation("商品成功添加");
                 return true;
             }
@@ -68,12 +68,12 @@ namespace LcsWebAPI.Controllers
         {
             try
             {
-                _context.LcsGoods.Update(new LcsGoods
-                {
+                //_context.LcsGoods.Update(new LcsGoods
+                //{
 
 
 
-                });
+                //});
                 _logger.LogInformation("修改商品成功");
                 return true;
             }
@@ -95,12 +95,12 @@ namespace LcsWebAPI.Controllers
         {
             try
             {
-                _context.LcsGoods.Remove(new LcsGoods
-                {
+                //_context.LcsGoods.Remove(new LcsGoods
+                //{
 
 
 
-                });
+                //});
                 _logger.LogInformation("商品成功删除");
                 return true;
             }

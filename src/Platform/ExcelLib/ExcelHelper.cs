@@ -263,12 +263,12 @@ namespace CommonFunction
         public DataTable ImportExceltoDt(string strFileName)
         {
             DataTable dt = new DataTable();
-            XSSFWorkbook XSSFWorkbook;
+            HSSFWorkbook XSSFWorkbook;
             using (FileStream file = new FileStream(strFileName, FileMode.Open, FileAccess.Read))
             {
-                XSSFWorkbook = new XSSFWorkbook(file);
+                XSSFWorkbook = new HSSFWorkbook(file);
             }
-            XSSFSheet sheet = XSSFWorkbook.GetSheetAt(0) as XSSFSheet;
+            HSSFSheet sheet = XSSFWorkbook.GetSheetAt(0) as HSSFSheet;
             dt = ImportDt(sheet, 0, true);
             return dt;
         }
@@ -282,12 +282,12 @@ namespace CommonFunction
         /// <returns></returns>
         public DataTable ImportExceltoDt(string strFileName, string SheetName, int HeaderRowIndex)
         {
-            XSSFWorkbook workbook;
+            IWorkbook workbook;
             using (FileStream file = new FileStream(strFileName, FileMode.Open, FileAccess.Read))
             {
-                workbook = new XSSFWorkbook(file);
+                workbook =GetworkBook(strFileName);
             }
-            XSSFSheet sheet = workbook.GetSheet(SheetName) as XSSFSheet;
+            HSSFSheet sheet = workbook.GetSheet(SheetName) as HSSFSheet;
             DataTable table = new DataTable();
             table = ImportDt(sheet, HeaderRowIndex, true);
             //ExcelFileStream.Close();
@@ -305,12 +305,12 @@ namespace CommonFunction
         /// <returns></returns>
         public DataTable ImportExceltoDt(string strFileName, int SheetIndex, int HeaderRowIndex)
         {
-            XSSFWorkbook workbook;
+            HSSFWorkbook workbook;
             using (FileStream file = new FileStream(strFileName, FileMode.Open, FileAccess.Read))
             {
-                workbook = new XSSFWorkbook(file);
+                workbook = new HSSFWorkbook(file);
             }
-            XSSFSheet sheet = workbook.GetSheetAt(SheetIndex) as XSSFSheet;
+            HSSFSheet sheet = workbook.GetSheetAt(SheetIndex) as HSSFSheet;
             DataTable table = new DataTable();
             table = ImportDt(sheet, HeaderRowIndex, true);
             //ExcelFileStream.Close();
@@ -328,12 +328,12 @@ namespace CommonFunction
         /// <returns></returns>
         public DataTable ImportExceltoDt(string strFileName, string SheetName, int HeaderRowIndex, bool needHeader)
         {
-            XSSFWorkbook workbook;
+            HSSFWorkbook workbook;
             using (FileStream file = new FileStream(strFileName, FileMode.Open, FileAccess.Read))
             {
-                workbook = new XSSFWorkbook(file);
+                workbook = new HSSFWorkbook(file);
             }
-            XSSFSheet sheet = workbook.GetSheet(SheetName) as XSSFSheet;
+            HSSFSheet sheet = workbook.GetSheet(SheetName) as HSSFSheet;
             DataTable table = new DataTable();
             table = ImportDt(sheet, HeaderRowIndex, needHeader);
             //ExcelFileStream.Close();
@@ -351,12 +351,12 @@ namespace CommonFunction
         /// <returns></returns>
         public DataTable ImportExceltoDt(string strFileName, int SheetIndex, int HeaderRowIndex, bool needHeader)
         {
-            XSSFWorkbook workbook;
+            HSSFWorkbook workbook;
             using (FileStream file = new FileStream(strFileName, FileMode.Open, FileAccess.Read))
             {
-                workbook = new XSSFWorkbook(file);
+                workbook = new HSSFWorkbook(file);
             }
-            XSSFSheet sheet = workbook.GetSheetAt(SheetIndex) as XSSFSheet;
+            HSSFSheet sheet = workbook.GetSheetAt(SheetIndex) as HSSFSheet;
             DataTable table = new DataTable();
             table = ImportDt(sheet, HeaderRowIndex, needHeader);
             //ExcelFileStream.Close();
@@ -371,16 +371,16 @@ namespace CommonFunction
         /// <param name="sheet">需要导出的sheet</param>
         /// <param name="HeaderRowIndex">列头所在行号，-1表示没有列头</param>
         /// <returns></returns>
-        public DataTable ImportDt(XSSFSheet sheet, int HeaderRowIndex, bool needHeader)
+        public DataTable ImportDt(HSSFSheet sheet, int HeaderRowIndex, bool needHeader)
         {
             DataTable table = new DataTable();
-            XSSFRow headerRow;
+            HSSFRow headerRow;
             int cellCount;
             try
             {
                 if (HeaderRowIndex < 0 || !needHeader)
                 {
-                    headerRow = sheet.GetRow(0) as XSSFRow;
+                    headerRow = sheet.GetRow(0) as HSSFRow;
                     cellCount = headerRow.LastCellNum;
 
                     for (int i = headerRow.FirstCellNum; i <= cellCount; i++)
@@ -391,7 +391,7 @@ namespace CommonFunction
                 }
                 else
                 {
-                    headerRow = sheet.GetRow(HeaderRowIndex) as XSSFRow;
+                    headerRow = sheet.GetRow(HeaderRowIndex) as HSSFRow;
                     cellCount = headerRow.LastCellNum;
 
                     for (int i = headerRow.FirstCellNum; i <= cellCount; i++)
@@ -427,14 +427,14 @@ namespace CommonFunction
                 {
                     try
                     {
-                        XSSFRow row;
+                        HSSFRow row;
                         if (sheet.GetRow(i) == null)
                         {
-                            row = sheet.CreateRow(i) as XSSFRow;
+                            row = sheet.CreateRow(i) as HSSFRow;
                         }
                         else
                         {
-                            row = sheet.GetRow(i) as XSSFRow;
+                            row = sheet.GetRow(i) as HSSFRow;
                         }
 
                         DataRow dataRow = table.NewRow();

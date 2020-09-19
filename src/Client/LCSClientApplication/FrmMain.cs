@@ -38,6 +38,7 @@ namespace LCSClientApplication
         {
             InitializeComponent();
             func_tab.SelectedIndex = 0;
+            tabShow.SelectedIndex = 0;
             timer1.Start();
             // Init();
         }

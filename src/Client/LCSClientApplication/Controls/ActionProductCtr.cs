@@ -160,6 +160,10 @@ namespace LCSClientApplication.Controls
                 Logger.Error(ex.Message);
                 return;
             }
+            finally
+            {
+                MessageBox.Show($"数据已经同步到云端！");
+            }
         }
 
         private void ActionProductCtr_Load(object sender, EventArgs e)
