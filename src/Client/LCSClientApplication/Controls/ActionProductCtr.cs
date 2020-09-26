@@ -135,35 +135,35 @@ namespace LCSClientApplication.Controls
                 return;
             }
 
-            //同步到云数据库
-            try
-            {
-                var restclient = new RestClient(Global.ClouldWebAPI);
-                string api = "";
-                if (actoinType == ActoinType.add)
-                {
-                    api = "/api/Goods/insert";
-                }
-                else if (actoinType == ActoinType.modify)
-                {
-                    api = "/api/Goods/update";
-                }
-                var request = new RestRequest(api, Method.POST);
-                request.AddHeader("Content-Type", "application/json");
-                request.AddJsonBody(goods);
-                var response = restclient.Execute(request);
-                var resout = JsonConvert.DeserializeObject<bool>(response.Content);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"同步到云端失败:{ex.Message}！");
-                Logger.Error(ex.Message);
-                return;
-            }
-            finally
-            {
-                MessageBox.Show($"数据已经同步到云端！");
-            }
+            ////同步到云数据库
+            //try
+            //{
+            //    var restclient = new RestClient(Global.ClouldWebAPI);
+            //    string api = "";
+            //    if (actoinType == ActoinType.add)
+            //    {
+            //        api = "/api/Goods/Insert";
+            //    }
+            //    else if (actoinType == ActoinType.modify)
+            //    {
+            //        api = "/api/Goods/Update";
+            //    }
+            //    var request = new RestRequest(api, Method.POST);
+            //    request.RequestFormat = DataFormat.Json;
+            //    request.AddHeader("Accept", "application/json");
+            //    request.AddHeader("Content-Type", "application/json");
+            //    request.AddBody(goods.ToString());
+
+            //    var response = restclient.Execute(request);
+
+            //    MessageBox.Show($"数据已经同步到云端！");
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show($"同步到云端失败:{ex.Message}！");
+            //    Logger.Error(ex.Message);
+            //    return;
+            //}
         }
 
         private void ActionProductCtr_Load(object sender, EventArgs e)

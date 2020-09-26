@@ -417,7 +417,8 @@ namespace CommonFunction
                         }
                         else
                         {
-                            DataColumn column = new DataColumn(headerRow.GetCell(i).ToString());
+                           
+                            DataColumn column = new DataColumn(headerRow.GetCell(i).ToString()+"["+ headerRow.GetCell(i).Address+"]");
                             table.Columns.Add(column);
                         }
                     }

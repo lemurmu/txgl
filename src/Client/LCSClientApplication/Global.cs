@@ -26,5 +26,7 @@ namespace LCSClientApplication
 
         public static string ExcelFilePath = "Excel\\GERIMPORT-2020-08-26.xls";
 
+        public static string MysqlPassword = "123456";
+
     }
 }

@@ -6,6 +6,7 @@ using System.Configuration;
 using System.Data;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 using DbType = SqlSugar.DbType;
 
 namespace Lcs.DataAccess
@@ -30,7 +31,9 @@ namespace Lcs.DataAccess
             {
                 if (db == null)
                 {
-                    db = new SqlSugarClient(
+                    try
+                    {
+                        db = new SqlSugarClient(
                              new ConnectionConfig()
                              {
                                  ConnectionString = ConnectionString,
@@ -38,6 +41,12 @@ namespace Lcs.DataAccess
                                  IsAutoCloseConnection = true,//自动释放数据务，如果存在事务，在事务结束后释放
                                  InitKeyType = InitKeyType.Attribute //从实体特性中读取主键自增列信息
                              });
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("数据库连接失败！请检查网络和连接字符串");
+                    }
+                    
                 }
                 return db;
             }

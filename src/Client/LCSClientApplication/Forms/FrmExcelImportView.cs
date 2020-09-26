@@ -8,6 +8,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Configuration;
 using System.Web.Security;
 using System.Windows.Forms;
 
@@ -26,7 +27,9 @@ namespace LCSClientApplication.Forms
         string excelName = "";
         string sheetName = "";
         private ExcelHelper helper = new ExcelHelper();
-        private List<pedidokehu> orderList = new List<pedidokehu>();
+        DataTable dt;
+        int index = 0;
+
         private void InitParams()
         {
             DataGridViewTextBoxColumn dataGridViewTextBox = new DataGridViewTextBoxColumn();
@@ -34,6 +37,7 @@ namespace LCSClientApplication.Forms
             dataGridViewTextBox.HeaderText = "数据名称";
 
             DataGridViewComboBoxColumn combo = new DataGridViewComboBoxColumn();
+            combo.FlatStyle = FlatStyle.Flat;
             combo.DataSource = Enum.GetValues(typeof(Position));
             combo.DataPropertyName = "Position";
             combo.Name = "position";
@@ -59,10 +63,10 @@ namespace LCSClientApplication.Forms
             };
             dataset_grid.DataSource = dataSetParams;
 
-             dt = helper.ImportExceltoDt(excelName, sheetName, 0);
+            dt = helper.ImportExceltoDt(excelName, sheetName, 0);
             this.pre_grid.DataSource = dt;
         }
-        DataTable dt;
+
         private void button1_Click(object sender, EventArgs e)
         {
             if (!isok_check.Checked)
@@ -70,30 +74,75 @@ namespace LCSClientApplication.Forms
                 MessageBox.Show("请选择确定后导入");
                 return;
             }
-            List<DataSetParams> dataSetParams = dataset_grid.DataSource as List<DataSetParams>;
-            orderList.Clear();
-            foreach (var item in dataSetParams)
-            {
-                int ColumnIndex = (int)item.position;
-            }
 
-          
+
+            MessageBox.Show("导入成功！");
 
         }
 
         private void tabPage2_Click(object sender, EventArgs e)
         {
-            import_preview_grid.DataSource = dt;
-            import_preview_grid.Columns.AddRange(new DataGridViewColumn[] {
-                new DataGridViewTextBoxColumn{Name="bianhao",HeaderText="编号",DataPropertyName="bianhao",ValueType=typeof(string)},
-                new DataGridViewTextBoxColumn{Name="tiaoxing",HeaderText="条形",DataPropertyName="tiaoxing",ValueType=typeof(string)},
-                new DataGridViewTextBoxColumn{Name="zhongwenpingming",HeaderText="中文品名",DataPropertyName="zhongwenpingming",ValueType=typeof(string)},
-                new DataGridViewTextBoxColumn{Name="baozhuangshu",HeaderText="包装数",DataPropertyName="baozhuangshu",ValueType=typeof(string)},
-                new DataGridViewTextBoxColumn{Name="zhuangxiangshu",HeaderText="装箱数",DataPropertyName="zhuangxiangshu",ValueType=typeof(decimal)},
-                new DataGridViewTextBoxColumn{Name="shijia",HeaderText="实价",DataPropertyName="shijia",ValueType=typeof(decimal)},
-                new DataGridViewTextBoxColumn{Name="kucun",HeaderText="库存",DataPropertyName="kucun",ValueType=typeof(decimal)},
-                new DataGridViewTextBoxColumn{Name="beizhu",HeaderText="备注",DataPropertyName="beizhu",ValueType=typeof(string)}
-            });
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tabControl1.SelectedIndex == 1)
+            {
+                
+                List<DataSetParams> dataSetParams = dataset_grid.DataSource as List<DataSetParams>;
+
+                foreach (var item in dataSetParams)
+                {
+                    string addr = item.position.ToString();
+                    string dataName = item.DataName;
+                    if (item.position == Position.Null)
+                    {
+                        continue;
+                    }
+
+                    if (index == 0)
+                    {
+                        DataGridViewTextBoxColumn datacolumn = new DataGridViewTextBoxColumn { HeaderText = dataName + "[" + addr + "]", ValueType = typeof(string) };
+                        import_preview_grid.Columns.Add(datacolumn);
+                    }
+                }
+
+                var list = dataSetParams.Where(t => t.position != Position.Null).ToList();
+
+                List<DataColumn> Columnlist = new List<DataColumn>();
+                for (int i = 0; i < dt.Columns.Count; i++)
+                {
+                    DataColumn column = dt.Columns[i];
+                    Columnlist.Add(column);
+                }
+
+
+                List<DataColumn> Columnlist2 = new List<DataColumn>();
+                foreach (var item in list)
+                {
+                    string addr = item.position.ToString();
+                    var list2 = Columnlist.Where(t => t.ColumnName.Contains(addr)).ToList();
+                    if (list2.Count == 0)
+                    {
+                        continue;
+                    }
+                    DataColumn column = list2[0];
+                    Columnlist2.Add(column);
+                }
+
+                for (int r = 0; r < dt.Rows.Count; r++)
+                {
+                    DataRow dr = dt.Rows[r];
+                    string[] values = new string[Columnlist2.Count];
+                    for (int i = 0; i < Columnlist2.Count; i++)
+                    {
+                        string value = dr[Columnlist2[i].ColumnName].ToString();
+                        values[i] = value;
+                    }
+                    import_preview_grid.Rows.Add(values);
+                }
+                index++;
+            }
         }
     }
 

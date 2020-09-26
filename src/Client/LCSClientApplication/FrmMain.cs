@@ -38,7 +38,8 @@ namespace LCSClientApplication
         {
             InitializeComponent();
             func_tab.SelectedIndex = 0;
-            tabShow.SelectedIndex = 0;
+            //tabShow.SelectedIndex = 0;
+          //func_tab.TabPages[0]
             timer1.Start();
             // Init();
         }
@@ -77,6 +78,8 @@ namespace LCSClientApplication
             frmHistotyOrder.Show();
         }
 
+        FrmProductManage frmProductManage;
+
         /// <summary>
         /// 产品管理
         /// </summary>
@@ -84,16 +87,16 @@ namespace LCSClientApplication
         /// <param name="e"></param>
         private void skinButton12_Click_1(object sender, EventArgs e)
         {
-            FrmProductManage frmProductManage = new FrmProductManage();
-            frmProductManage.Icon = this.Icon;
-            frmProductManage.Show();
+            ShowProductMannage();
         }
 
-       
         private void tabShow_SelectedIndexChanged(object sender, EventArgs e)
         {
             switch (tabShow.SelectedIndex)
             {
+                case 1:
+                    ShowProductMannage();
+                    break;
                 case 2:
                     FrmExcelImportGuid frmGuid1 = new FrmExcelImportGuid();
                     frmGuid1.Show();
@@ -101,6 +104,16 @@ namespace LCSClientApplication
                 default:
                     break;
             }
+        }
+
+        void ShowProductMannage()
+        {
+            if (frmProductManage==null||frmProductManage.IsDisposed)
+            {
+                frmProductManage = new FrmProductManage();
+            }
+            frmProductManage.Icon = this.Icon;
+            frmProductManage.Show();
         }
     }
 }

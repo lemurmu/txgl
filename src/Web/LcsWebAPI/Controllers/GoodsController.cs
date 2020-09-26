@@ -8,11 +8,12 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
 namespace LcsWebAPI.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[Action]")]
     [ApiController]
     public class GoodsController : ControllerBase
     {
@@ -28,12 +29,17 @@ namespace LcsWebAPI.Controllers
             _logger = logger;
         }
 
+        [HttpGet]
+        public void Get()
+        {
+
+        }
+
         /// <summary>
         /// 添加产品
         /// </summary>
         /// <param name="lcs_Goods"></param>
         /// <returns></returns>
-        [Route("insert")]
         [HttpPost]
         public bool Insert(JObject lcs_Goods)
         {
@@ -41,7 +47,7 @@ namespace LcsWebAPI.Controllers
             {
                 //_context.LcsGoods.Add(new LcsGoods
                 //{
-                   
+
 
 
                 //});
@@ -62,16 +68,14 @@ namespace LcsWebAPI.Controllers
         /// <param name="lcs_Goods"></param>
         /// <returns></returns>
 
-        [Route("update")]
         [HttpPost]
-        public bool Update(JObject lcs_Goods)
+        public bool Update(dynamic data)
         {
             try
             {
                 //_context.LcsGoods.Update(new LcsGoods
                 //{
-
-
+                JObject jObj = JObject.Parse(data);
 
                 //});
                 _logger.LogInformation("修改商品成功");

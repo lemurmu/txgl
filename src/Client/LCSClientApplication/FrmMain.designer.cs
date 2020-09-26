@@ -49,16 +49,6 @@ namespace LCSClientApplication
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             CCWin.CmSysButton cmSysButton1 = new CCWin.CmSysButton();
             this.imageList = new System.Windows.Forms.ImageList(this.components);
-            this.tabShow = new CCWin.SkinControl.SkinTabControl();
-            this.tabPageEx6 = new CCWin.SkinControl.SkinTabPage();
-            this.skinLabel26 = new CCWin.SkinControl.SkinLabel();
-            this.skinTabPage1 = new CCWin.SkinControl.SkinTabPage();
-            this.skinLabel2 = new CCWin.SkinControl.SkinLabel();
-            this.skinTabPage2 = new CCWin.SkinControl.SkinTabPage();
-            this.skinLabel3 = new CCWin.SkinControl.SkinLabel();
-            this.tabPageEx5 = new CCWin.SkinControl.SkinTabPage();
-            this.skinTabPage3 = new CCWin.SkinControl.SkinTabPage();
-            this.skinLabel4 = new CCWin.SkinControl.SkinLabel();
             this.imageListTwo = new System.Windows.Forms.ImageList(this.components);
             this.skinPanel2 = new CCWin.SkinControl.SkinPanel();
             this.skinPanel3 = new CCWin.SkinControl.SkinPanel();
@@ -107,11 +97,20 @@ namespace LCSClientApplication
             this.skinButton14 = new CCWin.SkinControl.SkinButton();
             this.skinLabel20 = new CCWin.SkinControl.SkinLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.tabShow.SuspendLayout();
-            this.tabPageEx6.SuspendLayout();
-            this.skinTabPage1.SuspendLayout();
-            this.skinTabPage2.SuspendLayout();
-            this.skinTabPage3.SuspendLayout();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.tabPageEx5 = new CCWin.SkinControl.SkinTabPage();
+            this.skinTabPage3 = new CCWin.SkinControl.SkinTabPage();
+            this.skinLabel4 = new CCWin.SkinControl.SkinLabel();
+            this.skinTabPage2 = new CCWin.SkinControl.SkinTabPage();
+            this.skinLabel3 = new CCWin.SkinControl.SkinLabel();
+            this.skinTabPage1 = new CCWin.SkinControl.SkinTabPage();
+            this.skinLabel2 = new CCWin.SkinControl.SkinLabel();
+            this.tabPageEx6 = new CCWin.SkinControl.SkinTabPage();
+            this.skinLabel26 = new CCWin.SkinControl.SkinLabel();
+            this.tabShow = new CCWin.SkinControl.SkinTabControl();
             this.skinPanel2.SuspendLayout();
             this.skinPanel3.SuspendLayout();
             this.MobileMenu.SuspendLayout();
@@ -122,6 +121,15 @@ namespace LCSClientApplication
             this.skinTabPage7.SuspendLayout();
             this.skinTabPage8.SuspendLayout();
             this.skinTabPage9.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.skinTabPage3.SuspendLayout();
+            this.skinTabPage2.SuspendLayout();
+            this.skinTabPage1.SuspendLayout();
+            this.tabPageEx6.SuspendLayout();
+            this.tabShow.SuspendLayout();
             this.SuspendLayout();
             // 
             // imageList
@@ -133,173 +141,6 @@ namespace LCSClientApplication
             this.imageList.Images.SetKeyName(2, "资料导入.png");
             this.imageList.Images.SetKeyName(3, "新到订单.png");
             this.imageList.Images.SetKeyName(4, "更新云数据.png");
-            // 
-            // tabShow
-            // 
-            this.tabShow.AnimatorType = CCWin.SkinControl.AnimationType.HorizSlide;
-            this.tabShow.CloseRect = new System.Drawing.Rectangle(2, 2, 12, 12);
-            this.tabShow.Controls.Add(this.tabPageEx6);
-            this.tabShow.Controls.Add(this.skinTabPage1);
-            this.tabShow.Controls.Add(this.skinTabPage2);
-            this.tabShow.Controls.Add(this.tabPageEx5);
-            this.tabShow.Controls.Add(this.skinTabPage3);
-            this.tabShow.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tabShow.HeadBack = null;
-            this.tabShow.ImageList = this.imageList;
-            this.tabShow.ImgSize = new System.Drawing.Size(41, 41);
-            this.tabShow.ImgTxtOffset = new System.Drawing.Point(0, 0);
-            this.tabShow.ImgTxtSpace = 0;
-            this.tabShow.ItemSize = new System.Drawing.Size(73, 70);
-            this.tabShow.Location = new System.Drawing.Point(4, 26);
-            this.tabShow.Margin = new System.Windows.Forms.Padding(0);
-            this.tabShow.Name = "tabShow";
-            this.tabShow.Padding = new System.Drawing.Point(0, 0);
-            this.tabShow.PageArrowDown = ((System.Drawing.Image)(resources.GetObject("tabShow.PageArrowDown")));
-            this.tabShow.PageArrowHover = ((System.Drawing.Image)(resources.GetObject("tabShow.PageArrowHover")));
-            this.tabShow.PageCloseHover = ((System.Drawing.Image)(resources.GetObject("tabShow.PageCloseHover")));
-            this.tabShow.PageCloseNormal = ((System.Drawing.Image)(resources.GetObject("tabShow.PageCloseNormal")));
-            this.tabShow.PageDown = ((System.Drawing.Image)(resources.GetObject("tabShow.PageDown")));
-            this.tabShow.PageHover = ((System.Drawing.Image)(resources.GetObject("tabShow.PageHover")));
-            this.tabShow.PageImagePosition = CCWin.SkinControl.SkinTabControl.ePageImagePosition.Top;
-            this.tabShow.PageNorml = null;
-            this.tabShow.PageTextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.tabShow.SelectedIndex = 2;
-            this.tabShow.Size = new System.Drawing.Size(982, 73);
-            this.tabShow.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            this.tabShow.TabIndex = 140;
-            this.tabShow.SelectedIndexChanged += new System.EventHandler(this.tabShow_SelectedIndexChanged);
-            // 
-            // tabPageEx6
-            // 
-            this.tabPageEx6.BackColor = System.Drawing.Color.White;
-            this.tabPageEx6.Controls.Add(this.skinLabel26);
-            this.tabPageEx6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabPageEx6.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tabPageEx6.ForeColor = System.Drawing.Color.White;
-            this.tabPageEx6.ImageIndex = 0;
-            this.tabPageEx6.Location = new System.Drawing.Point(0, 70);
-            this.tabPageEx6.Margin = new System.Windows.Forms.Padding(0);
-            this.tabPageEx6.Name = "tabPageEx6";
-            this.tabPageEx6.Size = new System.Drawing.Size(982, 3);
-            this.tabPageEx6.TabIndex = 5;
-            this.tabPageEx6.TabItemImage = null;
-            this.tabPageEx6.Text = "库存查询";
-            // 
-            // skinLabel26
-            // 
-            this.skinLabel26.ArtTextStyle = CCWin.SkinControl.ArtTextStyle.None;
-            this.skinLabel26.AutoSize = true;
-            this.skinLabel26.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel26.BorderColor = System.Drawing.Color.White;
-            this.skinLabel26.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold);
-            this.skinLabel26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
-            this.skinLabel26.Location = new System.Drawing.Point(388, 238);
-            this.skinLabel26.Name = "skinLabel26";
-            this.skinLabel26.Size = new System.Drawing.Size(0, 22);
-            this.skinLabel26.TabIndex = 1;
-            // 
-            // skinTabPage1
-            // 
-            this.skinTabPage1.BackColor = System.Drawing.Color.White;
-            this.skinTabPage1.Controls.Add(this.skinLabel2);
-            this.skinTabPage1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinTabPage1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinTabPage1.ForeColor = System.Drawing.Color.White;
-            this.skinTabPage1.ImageIndex = 1;
-            this.skinTabPage1.Location = new System.Drawing.Point(0, 70);
-            this.skinTabPage1.Margin = new System.Windows.Forms.Padding(0);
-            this.skinTabPage1.Name = "skinTabPage1";
-            this.skinTabPage1.Size = new System.Drawing.Size(982, 3);
-            this.skinTabPage1.TabIndex = 7;
-            this.skinTabPage1.TabItemImage = null;
-            this.skinTabPage1.Text = "产品管理";
-            // 
-            // skinLabel2
-            // 
-            this.skinLabel2.ArtTextStyle = CCWin.SkinControl.ArtTextStyle.None;
-            this.skinLabel2.AutoSize = true;
-            this.skinLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel2.BorderColor = System.Drawing.Color.White;
-            this.skinLabel2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold);
-            this.skinLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
-            this.skinLabel2.Location = new System.Drawing.Point(388, 238);
-            this.skinLabel2.Name = "skinLabel2";
-            this.skinLabel2.Size = new System.Drawing.Size(0, 22);
-            this.skinLabel2.TabIndex = 1;
-            // 
-            // skinTabPage2
-            // 
-            this.skinTabPage2.BackColor = System.Drawing.Color.White;
-            this.skinTabPage2.Controls.Add(this.skinLabel3);
-            this.skinTabPage2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinTabPage2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinTabPage2.ForeColor = System.Drawing.Color.White;
-            this.skinTabPage2.ImageIndex = 2;
-            this.skinTabPage2.Location = new System.Drawing.Point(0, 70);
-            this.skinTabPage2.Margin = new System.Windows.Forms.Padding(0);
-            this.skinTabPage2.Name = "skinTabPage2";
-            this.skinTabPage2.Size = new System.Drawing.Size(982, 3);
-            this.skinTabPage2.TabIndex = 8;
-            this.skinTabPage2.TabItemImage = null;
-            this.skinTabPage2.Text = "资料导入";
-            // 
-            // skinLabel3
-            // 
-            this.skinLabel3.ArtTextStyle = CCWin.SkinControl.ArtTextStyle.None;
-            this.skinLabel3.AutoSize = true;
-            this.skinLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel3.BorderColor = System.Drawing.Color.White;
-            this.skinLabel3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold);
-            this.skinLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
-            this.skinLabel3.Location = new System.Drawing.Point(388, 238);
-            this.skinLabel3.Name = "skinLabel3";
-            this.skinLabel3.Size = new System.Drawing.Size(0, 22);
-            this.skinLabel3.TabIndex = 1;
-            // 
-            // tabPageEx5
-            // 
-            this.tabPageEx5.BackColor = System.Drawing.Color.White;
-            this.tabPageEx5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.tabPageEx5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabPageEx5.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.tabPageEx5.ForeColor = System.Drawing.Color.White;
-            this.tabPageEx5.ImageIndex = 3;
-            this.tabPageEx5.Location = new System.Drawing.Point(0, 70);
-            this.tabPageEx5.Margin = new System.Windows.Forms.Padding(0);
-            this.tabPageEx5.Name = "tabPageEx5";
-            this.tabPageEx5.Size = new System.Drawing.Size(982, 3);
-            this.tabPageEx5.TabIndex = 4;
-            this.tabPageEx5.TabItemImage = null;
-            this.tabPageEx5.Text = "新到订单";
-            // 
-            // skinTabPage3
-            // 
-            this.skinTabPage3.BackColor = System.Drawing.Color.White;
-            this.skinTabPage3.Controls.Add(this.skinLabel4);
-            this.skinTabPage3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinTabPage3.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinTabPage3.ForeColor = System.Drawing.Color.White;
-            this.skinTabPage3.ImageIndex = 4;
-            this.skinTabPage3.Location = new System.Drawing.Point(0, 70);
-            this.skinTabPage3.Margin = new System.Windows.Forms.Padding(0);
-            this.skinTabPage3.Name = "skinTabPage3";
-            this.skinTabPage3.Size = new System.Drawing.Size(982, 3);
-            this.skinTabPage3.TabIndex = 9;
-            this.skinTabPage3.TabItemImage = null;
-            this.skinTabPage3.Text = "更新云数据库";
-            // 
-            // skinLabel4
-            // 
-            this.skinLabel4.ArtTextStyle = CCWin.SkinControl.ArtTextStyle.None;
-            this.skinLabel4.AutoSize = true;
-            this.skinLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel4.BorderColor = System.Drawing.Color.White;
-            this.skinLabel4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold);
-            this.skinLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
-            this.skinLabel4.Location = new System.Drawing.Point(388, 238);
-            this.skinLabel4.Name = "skinLabel4";
-            this.skinLabel4.Size = new System.Drawing.Size(0, 22);
-            this.skinLabel4.TabIndex = 1;
             // 
             // imageListTwo
             // 
@@ -554,7 +395,7 @@ namespace LCSClientApplication
             this.func_tab.PageImagePosition = CCWin.SkinControl.SkinTabControl.ePageImagePosition.Top;
             this.func_tab.PageNorml = ((System.Drawing.Image)(resources.GetObject("func_tab.PageNorml")));
             this.func_tab.PageTextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.func_tab.SelectedIndex = 1;
+            this.func_tab.SelectedIndex = 3;
             this.func_tab.Size = new System.Drawing.Size(982, 560);
             this.func_tab.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.func_tab.TabIndex = 147;
@@ -563,10 +404,8 @@ namespace LCSClientApplication
             // 
             this.skinTabPage5.BackColor = System.Drawing.Color.White;
             this.skinTabPage5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.skinTabPage5.Controls.Add(this.skinButton6);
-            this.skinTabPage5.Controls.Add(this.skinButton5);
-            this.skinTabPage5.Controls.Add(this.skinButton4);
-            this.skinTabPage5.Controls.Add(this.skinButton11);
+            this.skinTabPage5.BorderColor = System.Drawing.Color.White;
+            this.skinTabPage5.Controls.Add(this.panel1);
             this.skinTabPage5.Controls.Add(this.pictureBox3);
             this.skinTabPage5.Controls.Add(this.pictureBox4);
             this.skinTabPage5.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -576,7 +415,7 @@ namespace LCSClientApplication
             this.skinTabPage5.Location = new System.Drawing.Point(150, 0);
             this.skinTabPage5.Margin = new System.Windows.Forms.Padding(0);
             this.skinTabPage5.Name = "skinTabPage5";
-            this.skinTabPage5.Size = new System.Drawing.Size(832, 560);
+            this.skinTabPage5.Size = new System.Drawing.Size(832, 550);
             this.skinTabPage5.TabIndex = 1;
             this.skinTabPage5.TabItemImage = null;
             this.skinTabPage5.Text = "订单管理";
@@ -590,7 +429,7 @@ namespace LCSClientApplication
             this.skinButton6.DrawType = CCWin.SkinControl.DrawStyle.Img;
             this.skinButton6.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinButton6.ForeColor = System.Drawing.Color.White;
-            this.skinButton6.Location = new System.Drawing.Point(263, 202);
+            this.skinButton6.Location = new System.Drawing.Point(229, 168);
             this.skinButton6.MouseBack = ((System.Drawing.Image)(resources.GetObject("skinButton6.MouseBack")));
             this.skinButton6.Name = "skinButton6";
             this.skinButton6.NormlBack = ((System.Drawing.Image)(resources.GetObject("skinButton6.NormlBack")));
@@ -608,7 +447,7 @@ namespace LCSClientApplication
             this.skinButton5.DrawType = CCWin.SkinControl.DrawStyle.Img;
             this.skinButton5.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinButton5.ForeColor = System.Drawing.Color.White;
-            this.skinButton5.Location = new System.Drawing.Point(263, 88);
+            this.skinButton5.Location = new System.Drawing.Point(229, 38);
             this.skinButton5.MouseBack = ((System.Drawing.Image)(resources.GetObject("skinButton5.MouseBack")));
             this.skinButton5.Name = "skinButton5";
             this.skinButton5.NormlBack = ((System.Drawing.Image)(resources.GetObject("skinButton5.NormlBack")));
@@ -626,7 +465,7 @@ namespace LCSClientApplication
             this.skinButton4.DrawType = CCWin.SkinControl.DrawStyle.Img;
             this.skinButton4.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinButton4.ForeColor = System.Drawing.Color.White;
-            this.skinButton4.Location = new System.Drawing.Point(35, 202);
+            this.skinButton4.Location = new System.Drawing.Point(3, 168);
             this.skinButton4.MouseBack = ((System.Drawing.Image)(resources.GetObject("skinButton4.MouseBack")));
             this.skinButton4.Name = "skinButton4";
             this.skinButton4.NormlBack = ((System.Drawing.Image)(resources.GetObject("skinButton4.NormlBack")));
@@ -645,7 +484,7 @@ namespace LCSClientApplication
             this.skinButton11.DrawType = CCWin.SkinControl.DrawStyle.Img;
             this.skinButton11.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinButton11.ForeColor = System.Drawing.Color.White;
-            this.skinButton11.Location = new System.Drawing.Point(35, 88);
+            this.skinButton11.Location = new System.Drawing.Point(3, 38);
             this.skinButton11.MouseBack = ((System.Drawing.Image)(resources.GetObject("skinButton11.MouseBack")));
             this.skinButton11.Name = "skinButton11";
             this.skinButton11.NormlBack = ((System.Drawing.Image)(resources.GetObject("skinButton11.NormlBack")));
@@ -680,12 +519,7 @@ namespace LCSClientApplication
             // 
             this.skinTabPage7.BackColor = System.Drawing.Color.White;
             this.skinTabPage7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.skinTabPage7.Controls.Add(this.skinButton16);
-            this.skinTabPage7.Controls.Add(this.skinButton15);
-            this.skinTabPage7.Controls.Add(this.skinButton7);
-            this.skinTabPage7.Controls.Add(this.skinButton8);
-            this.skinTabPage7.Controls.Add(this.skinButton9);
-            this.skinTabPage7.Controls.Add(this.skinButton12);
+            this.skinTabPage7.Controls.Add(this.panel2);
             this.skinTabPage7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.skinTabPage7.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinTabPage7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(170)))), ((int)(((byte)(15)))));
@@ -693,7 +527,7 @@ namespace LCSClientApplication
             this.skinTabPage7.Location = new System.Drawing.Point(150, 0);
             this.skinTabPage7.Margin = new System.Windows.Forms.Padding(0);
             this.skinTabPage7.Name = "skinTabPage7";
-            this.skinTabPage7.Size = new System.Drawing.Size(832, 560);
+            this.skinTabPage7.Size = new System.Drawing.Size(832, 550);
             this.skinTabPage7.TabIndex = 3;
             this.skinTabPage7.TabItemImage = null;
             this.skinTabPage7.Text = "产品资料";
@@ -707,7 +541,7 @@ namespace LCSClientApplication
             this.skinButton16.DrawType = CCWin.SkinControl.DrawStyle.Img;
             this.skinButton16.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinButton16.ForeColor = System.Drawing.Color.White;
-            this.skinButton16.Location = new System.Drawing.Point(270, 324);
+            this.skinButton16.Location = new System.Drawing.Point(231, 274);
             this.skinButton16.MouseBack = ((System.Drawing.Image)(resources.GetObject("skinButton16.MouseBack")));
             this.skinButton16.Name = "skinButton16";
             this.skinButton16.NormlBack = ((System.Drawing.Image)(resources.GetObject("skinButton16.NormlBack")));
@@ -725,7 +559,7 @@ namespace LCSClientApplication
             this.skinButton15.DrawType = CCWin.SkinControl.DrawStyle.Img;
             this.skinButton15.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinButton15.ForeColor = System.Drawing.Color.White;
-            this.skinButton15.Location = new System.Drawing.Point(42, 324);
+            this.skinButton15.Location = new System.Drawing.Point(3, 274);
             this.skinButton15.MouseBack = ((System.Drawing.Image)(resources.GetObject("skinButton15.MouseBack")));
             this.skinButton15.Name = "skinButton15";
             this.skinButton15.NormlBack = ((System.Drawing.Image)(resources.GetObject("skinButton15.NormlBack")));
@@ -743,7 +577,7 @@ namespace LCSClientApplication
             this.skinButton7.DrawType = CCWin.SkinControl.DrawStyle.Img;
             this.skinButton7.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinButton7.ForeColor = System.Drawing.Color.White;
-            this.skinButton7.Location = new System.Drawing.Point(270, 213);
+            this.skinButton7.Location = new System.Drawing.Point(231, 157);
             this.skinButton7.MouseBack = ((System.Drawing.Image)(resources.GetObject("skinButton7.MouseBack")));
             this.skinButton7.Name = "skinButton7";
             this.skinButton7.NormlBack = ((System.Drawing.Image)(resources.GetObject("skinButton7.NormlBack")));
@@ -761,7 +595,7 @@ namespace LCSClientApplication
             this.skinButton8.DrawType = CCWin.SkinControl.DrawStyle.Img;
             this.skinButton8.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinButton8.ForeColor = System.Drawing.Color.White;
-            this.skinButton8.Location = new System.Drawing.Point(270, 99);
+            this.skinButton8.Location = new System.Drawing.Point(231, 40);
             this.skinButton8.MouseBack = ((System.Drawing.Image)(resources.GetObject("skinButton8.MouseBack")));
             this.skinButton8.Name = "skinButton8";
             this.skinButton8.NormlBack = ((System.Drawing.Image)(resources.GetObject("skinButton8.NormlBack")));
@@ -779,7 +613,7 @@ namespace LCSClientApplication
             this.skinButton9.DrawType = CCWin.SkinControl.DrawStyle.Img;
             this.skinButton9.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinButton9.ForeColor = System.Drawing.Color.White;
-            this.skinButton9.Location = new System.Drawing.Point(42, 213);
+            this.skinButton9.Location = new System.Drawing.Point(3, 157);
             this.skinButton9.MouseBack = ((System.Drawing.Image)(resources.GetObject("skinButton9.MouseBack")));
             this.skinButton9.Name = "skinButton9";
             this.skinButton9.NormlBack = ((System.Drawing.Image)(resources.GetObject("skinButton9.NormlBack")));
@@ -797,7 +631,7 @@ namespace LCSClientApplication
             this.skinButton12.DrawType = CCWin.SkinControl.DrawStyle.Img;
             this.skinButton12.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinButton12.ForeColor = System.Drawing.Color.White;
-            this.skinButton12.Location = new System.Drawing.Point(42, 99);
+            this.skinButton12.Location = new System.Drawing.Point(3, 40);
             this.skinButton12.MouseBack = ((System.Drawing.Image)(resources.GetObject("skinButton12.MouseBack")));
             this.skinButton12.Name = "skinButton12";
             this.skinButton12.NormlBack = ((System.Drawing.Image)(resources.GetObject("skinButton12.NormlBack")));
@@ -811,12 +645,7 @@ namespace LCSClientApplication
             // 
             this.skinTabPage8.BackColor = System.Drawing.Color.White;
             this.skinTabPage8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.skinTabPage8.Controls.Add(this.skinButton21);
-            this.skinTabPage8.Controls.Add(this.skinButton17);
-            this.skinTabPage8.Controls.Add(this.skinButton13);
-            this.skinTabPage8.Controls.Add(this.skinButton3);
-            this.skinTabPage8.Controls.Add(this.skinButton2);
-            this.skinTabPage8.Controls.Add(this.skinButton1);
+            this.skinTabPage8.Controls.Add(this.panel3);
             this.skinTabPage8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.skinTabPage8.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinTabPage8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(170)))), ((int)(((byte)(15)))));
@@ -824,7 +653,7 @@ namespace LCSClientApplication
             this.skinTabPage8.Location = new System.Drawing.Point(150, 0);
             this.skinTabPage8.Margin = new System.Windows.Forms.Padding(0);
             this.skinTabPage8.Name = "skinTabPage8";
-            this.skinTabPage8.Size = new System.Drawing.Size(832, 560);
+            this.skinTabPage8.Size = new System.Drawing.Size(832, 550);
             this.skinTabPage8.TabIndex = 4;
             this.skinTabPage8.TabItemImage = null;
             this.skinTabPage8.Text = "基础资料";
@@ -838,7 +667,7 @@ namespace LCSClientApplication
             this.skinButton21.DrawType = CCWin.SkinControl.DrawStyle.Img;
             this.skinButton21.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinButton21.ForeColor = System.Drawing.Color.White;
-            this.skinButton21.Location = new System.Drawing.Point(29, 301);
+            this.skinButton21.Location = new System.Drawing.Point(3, 243);
             this.skinButton21.MouseBack = ((System.Drawing.Image)(resources.GetObject("skinButton21.MouseBack")));
             this.skinButton21.Name = "skinButton21";
             this.skinButton21.NormlBack = ((System.Drawing.Image)(resources.GetObject("skinButton21.NormlBack")));
@@ -856,7 +685,7 @@ namespace LCSClientApplication
             this.skinButton17.DrawType = CCWin.SkinControl.DrawStyle.Img;
             this.skinButton17.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinButton17.ForeColor = System.Drawing.Color.White;
-            this.skinButton17.Location = new System.Drawing.Point(266, 301);
+            this.skinButton17.Location = new System.Drawing.Point(244, 243);
             this.skinButton17.MouseBack = ((System.Drawing.Image)(resources.GetObject("skinButton17.MouseBack")));
             this.skinButton17.Name = "skinButton17";
             this.skinButton17.NormlBack = ((System.Drawing.Image)(resources.GetObject("skinButton17.NormlBack")));
@@ -874,7 +703,7 @@ namespace LCSClientApplication
             this.skinButton13.DrawType = CCWin.SkinControl.DrawStyle.Img;
             this.skinButton13.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinButton13.ForeColor = System.Drawing.Color.White;
-            this.skinButton13.Location = new System.Drawing.Point(29, 92);
+            this.skinButton13.Location = new System.Drawing.Point(3, 27);
             this.skinButton13.MouseBack = ((System.Drawing.Image)(resources.GetObject("skinButton13.MouseBack")));
             this.skinButton13.Name = "skinButton13";
             this.skinButton13.NormlBack = ((System.Drawing.Image)(resources.GetObject("skinButton13.NormlBack")));
@@ -892,7 +721,7 @@ namespace LCSClientApplication
             this.skinButton3.DrawType = CCWin.SkinControl.DrawStyle.Img;
             this.skinButton3.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinButton3.ForeColor = System.Drawing.Color.White;
-            this.skinButton3.Location = new System.Drawing.Point(266, 92);
+            this.skinButton3.Location = new System.Drawing.Point(244, 27);
             this.skinButton3.MouseBack = ((System.Drawing.Image)(resources.GetObject("skinButton3.MouseBack")));
             this.skinButton3.Name = "skinButton3";
             this.skinButton3.NormlBack = ((System.Drawing.Image)(resources.GetObject("skinButton3.NormlBack")));
@@ -910,7 +739,7 @@ namespace LCSClientApplication
             this.skinButton2.DrawType = CCWin.SkinControl.DrawStyle.Img;
             this.skinButton2.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinButton2.ForeColor = System.Drawing.Color.White;
-            this.skinButton2.Location = new System.Drawing.Point(29, 193);
+            this.skinButton2.Location = new System.Drawing.Point(3, 137);
             this.skinButton2.MouseBack = ((System.Drawing.Image)(resources.GetObject("skinButton2.MouseBack")));
             this.skinButton2.Name = "skinButton2";
             this.skinButton2.NormlBack = ((System.Drawing.Image)(resources.GetObject("skinButton2.NormlBack")));
@@ -928,7 +757,7 @@ namespace LCSClientApplication
             this.skinButton1.DrawType = CCWin.SkinControl.DrawStyle.Img;
             this.skinButton1.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinButton1.ForeColor = System.Drawing.Color.White;
-            this.skinButton1.Location = new System.Drawing.Point(266, 193);
+            this.skinButton1.Location = new System.Drawing.Point(244, 137);
             this.skinButton1.MouseBack = ((System.Drawing.Image)(resources.GetObject("skinButton1.MouseBack")));
             this.skinButton1.Name = "skinButton1";
             this.skinButton1.NormlBack = ((System.Drawing.Image)(resources.GetObject("skinButton1.NormlBack")));
@@ -941,10 +770,7 @@ namespace LCSClientApplication
             // 
             this.skinTabPage9.BackColor = System.Drawing.Color.White;
             this.skinTabPage9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.skinTabPage9.Controls.Add(this.skinButton20);
-            this.skinTabPage9.Controls.Add(this.skinButton19);
-            this.skinTabPage9.Controls.Add(this.skinButton18);
-            this.skinTabPage9.Controls.Add(this.skinButton14);
+            this.skinTabPage9.Controls.Add(this.panel4);
             this.skinTabPage9.Controls.Add(this.skinLabel20);
             this.skinTabPage9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.skinTabPage9.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -967,7 +793,7 @@ namespace LCSClientApplication
             this.skinButton20.DrawType = CCWin.SkinControl.DrawStyle.Img;
             this.skinButton20.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinButton20.ForeColor = System.Drawing.Color.White;
-            this.skinButton20.Location = new System.Drawing.Point(28, 190);
+            this.skinButton20.Location = new System.Drawing.Point(3, 126);
             this.skinButton20.MouseBack = ((System.Drawing.Image)(resources.GetObject("skinButton20.MouseBack")));
             this.skinButton20.Name = "skinButton20";
             this.skinButton20.NormlBack = ((System.Drawing.Image)(resources.GetObject("skinButton20.NormlBack")));
@@ -985,7 +811,7 @@ namespace LCSClientApplication
             this.skinButton19.DrawType = CCWin.SkinControl.DrawStyle.Img;
             this.skinButton19.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinButton19.ForeColor = System.Drawing.Color.White;
-            this.skinButton19.Location = new System.Drawing.Point(256, 190);
+            this.skinButton19.Location = new System.Drawing.Point(231, 126);
             this.skinButton19.MouseBack = ((System.Drawing.Image)(resources.GetObject("skinButton19.MouseBack")));
             this.skinButton19.Name = "skinButton19";
             this.skinButton19.NormlBack = ((System.Drawing.Image)(resources.GetObject("skinButton19.NormlBack")));
@@ -1003,7 +829,7 @@ namespace LCSClientApplication
             this.skinButton18.DrawType = CCWin.SkinControl.DrawStyle.Img;
             this.skinButton18.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinButton18.ForeColor = System.Drawing.Color.White;
-            this.skinButton18.Location = new System.Drawing.Point(28, 87);
+            this.skinButton18.Location = new System.Drawing.Point(3, 15);
             this.skinButton18.MouseBack = ((System.Drawing.Image)(resources.GetObject("skinButton18.MouseBack")));
             this.skinButton18.Name = "skinButton18";
             this.skinButton18.NormlBack = ((System.Drawing.Image)(resources.GetObject("skinButton18.NormlBack")));
@@ -1021,7 +847,7 @@ namespace LCSClientApplication
             this.skinButton14.DrawType = CCWin.SkinControl.DrawStyle.Img;
             this.skinButton14.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinButton14.ForeColor = System.Drawing.Color.White;
-            this.skinButton14.Location = new System.Drawing.Point(256, 87);
+            this.skinButton14.Location = new System.Drawing.Point(231, 15);
             this.skinButton14.MouseBack = ((System.Drawing.Image)(resources.GetObject("skinButton14.MouseBack")));
             this.skinButton14.Name = "skinButton14";
             this.skinButton14.NormlBack = ((System.Drawing.Image)(resources.GetObject("skinButton14.NormlBack")));
@@ -1047,6 +873,221 @@ namespace LCSClientApplication
             // 
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.skinButton6);
+            this.panel1.Controls.Add(this.skinButton5);
+            this.panel1.Controls.Add(this.skinButton4);
+            this.panel1.Controls.Add(this.skinButton11);
+            this.panel1.Location = new System.Drawing.Point(25, 48);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(511, 236);
+            this.panel1.TabIndex = 11;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.skinButton8);
+            this.panel2.Controls.Add(this.skinButton15);
+            this.panel2.Controls.Add(this.skinButton16);
+            this.panel2.Controls.Add(this.skinButton12);
+            this.panel2.Controls.Add(this.skinButton9);
+            this.panel2.Controls.Add(this.skinButton7);
+            this.panel2.Location = new System.Drawing.Point(13, 59);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(485, 344);
+            this.panel2.TabIndex = 17;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.skinButton1);
+            this.panel3.Controls.Add(this.skinButton21);
+            this.panel3.Controls.Add(this.skinButton17);
+            this.panel3.Controls.Add(this.skinButton2);
+            this.panel3.Controls.Add(this.skinButton13);
+            this.panel3.Controls.Add(this.skinButton3);
+            this.panel3.Location = new System.Drawing.Point(17, 64);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(568, 351);
+            this.panel3.TabIndex = 18;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.skinButton14);
+            this.panel4.Controls.Add(this.skinButton19);
+            this.panel4.Controls.Add(this.skinButton20);
+            this.panel4.Controls.Add(this.skinButton18);
+            this.panel4.Location = new System.Drawing.Point(3, 68);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(482, 202);
+            this.panel4.TabIndex = 16;
+            // 
+            // tabPageEx5
+            // 
+            this.tabPageEx5.BackColor = System.Drawing.Color.White;
+            this.tabPageEx5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.tabPageEx5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabPageEx5.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tabPageEx5.ForeColor = System.Drawing.Color.White;
+            this.tabPageEx5.ImageIndex = 3;
+            this.tabPageEx5.Location = new System.Drawing.Point(0, 70);
+            this.tabPageEx5.Margin = new System.Windows.Forms.Padding(0);
+            this.tabPageEx5.Name = "tabPageEx5";
+            this.tabPageEx5.Size = new System.Drawing.Size(982, 135);
+            this.tabPageEx5.TabIndex = 4;
+            this.tabPageEx5.TabItemImage = null;
+            this.tabPageEx5.Text = "新到订单";
+            // 
+            // skinTabPage3
+            // 
+            this.skinTabPage3.BackColor = System.Drawing.Color.White;
+            this.skinTabPage3.Controls.Add(this.skinLabel4);
+            this.skinTabPage3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinTabPage3.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinTabPage3.ForeColor = System.Drawing.Color.White;
+            this.skinTabPage3.ImageIndex = 4;
+            this.skinTabPage3.Location = new System.Drawing.Point(0, 70);
+            this.skinTabPage3.Margin = new System.Windows.Forms.Padding(0);
+            this.skinTabPage3.Name = "skinTabPage3";
+            this.skinTabPage3.Size = new System.Drawing.Size(982, 135);
+            this.skinTabPage3.TabIndex = 9;
+            this.skinTabPage3.TabItemImage = null;
+            this.skinTabPage3.Text = "更新云数据库";
+            // 
+            // skinLabel4
+            // 
+            this.skinLabel4.ArtTextStyle = CCWin.SkinControl.ArtTextStyle.None;
+            this.skinLabel4.AutoSize = true;
+            this.skinLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel4.BorderColor = System.Drawing.Color.White;
+            this.skinLabel4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold);
+            this.skinLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
+            this.skinLabel4.Location = new System.Drawing.Point(388, 238);
+            this.skinLabel4.Name = "skinLabel4";
+            this.skinLabel4.Size = new System.Drawing.Size(0, 22);
+            this.skinLabel4.TabIndex = 1;
+            // 
+            // skinTabPage2
+            // 
+            this.skinTabPage2.BackColor = System.Drawing.Color.White;
+            this.skinTabPage2.Controls.Add(this.skinLabel3);
+            this.skinTabPage2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinTabPage2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinTabPage2.ForeColor = System.Drawing.Color.White;
+            this.skinTabPage2.ImageIndex = 2;
+            this.skinTabPage2.Location = new System.Drawing.Point(0, 70);
+            this.skinTabPage2.Margin = new System.Windows.Forms.Padding(0);
+            this.skinTabPage2.Name = "skinTabPage2";
+            this.skinTabPage2.Size = new System.Drawing.Size(982, 1);
+            this.skinTabPage2.TabIndex = 8;
+            this.skinTabPage2.TabItemImage = null;
+            this.skinTabPage2.Text = "资料导入";
+            // 
+            // skinLabel3
+            // 
+            this.skinLabel3.ArtTextStyle = CCWin.SkinControl.ArtTextStyle.None;
+            this.skinLabel3.AutoSize = true;
+            this.skinLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel3.BorderColor = System.Drawing.Color.White;
+            this.skinLabel3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold);
+            this.skinLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
+            this.skinLabel3.Location = new System.Drawing.Point(388, 238);
+            this.skinLabel3.Name = "skinLabel3";
+            this.skinLabel3.Size = new System.Drawing.Size(0, 22);
+            this.skinLabel3.TabIndex = 1;
+            // 
+            // skinTabPage1
+            // 
+            this.skinTabPage1.BackColor = System.Drawing.Color.White;
+            this.skinTabPage1.Controls.Add(this.skinLabel2);
+            this.skinTabPage1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinTabPage1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinTabPage1.ForeColor = System.Drawing.Color.White;
+            this.skinTabPage1.ImageIndex = 1;
+            this.skinTabPage1.Location = new System.Drawing.Point(0, 70);
+            this.skinTabPage1.Margin = new System.Windows.Forms.Padding(0);
+            this.skinTabPage1.Name = "skinTabPage1";
+            this.skinTabPage1.Size = new System.Drawing.Size(982, 1);
+            this.skinTabPage1.TabIndex = 7;
+            this.skinTabPage1.TabItemImage = null;
+            this.skinTabPage1.Text = "产品管理";
+            // 
+            // skinLabel2
+            // 
+            this.skinLabel2.ArtTextStyle = CCWin.SkinControl.ArtTextStyle.None;
+            this.skinLabel2.AutoSize = true;
+            this.skinLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel2.BorderColor = System.Drawing.Color.White;
+            this.skinLabel2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold);
+            this.skinLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
+            this.skinLabel2.Location = new System.Drawing.Point(388, 238);
+            this.skinLabel2.Name = "skinLabel2";
+            this.skinLabel2.Size = new System.Drawing.Size(0, 22);
+            this.skinLabel2.TabIndex = 1;
+            // 
+            // tabPageEx6
+            // 
+            this.tabPageEx6.BackColor = System.Drawing.Color.White;
+            this.tabPageEx6.Controls.Add(this.skinLabel26);
+            this.tabPageEx6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabPageEx6.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tabPageEx6.ForeColor = System.Drawing.Color.White;
+            this.tabPageEx6.ImageIndex = 0;
+            this.tabPageEx6.Location = new System.Drawing.Point(0, 70);
+            this.tabPageEx6.Margin = new System.Windows.Forms.Padding(0);
+            this.tabPageEx6.Name = "tabPageEx6";
+            this.tabPageEx6.Size = new System.Drawing.Size(982, 3);
+            this.tabPageEx6.TabIndex = 5;
+            this.tabPageEx6.TabItemImage = null;
+            this.tabPageEx6.Text = "库存查询";
+            // 
+            // skinLabel26
+            // 
+            this.skinLabel26.ArtTextStyle = CCWin.SkinControl.ArtTextStyle.None;
+            this.skinLabel26.AutoSize = true;
+            this.skinLabel26.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel26.BorderColor = System.Drawing.Color.White;
+            this.skinLabel26.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold);
+            this.skinLabel26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
+            this.skinLabel26.Location = new System.Drawing.Point(388, 238);
+            this.skinLabel26.Name = "skinLabel26";
+            this.skinLabel26.Size = new System.Drawing.Size(0, 22);
+            this.skinLabel26.TabIndex = 1;
+            // 
+            // tabShow
+            // 
+            this.tabShow.AnimatorType = CCWin.SkinControl.AnimationType.HorizSlide;
+            this.tabShow.CloseRect = new System.Drawing.Rectangle(2, 2, 12, 12);
+            this.tabShow.Controls.Add(this.tabPageEx6);
+            this.tabShow.Controls.Add(this.skinTabPage1);
+            this.tabShow.Controls.Add(this.skinTabPage2);
+            this.tabShow.Controls.Add(this.skinTabPage3);
+            this.tabShow.Controls.Add(this.tabPageEx5);
+            this.tabShow.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tabShow.HeadBack = null;
+            this.tabShow.ImageList = this.imageList;
+            this.tabShow.ImgSize = new System.Drawing.Size(41, 41);
+            this.tabShow.ImgTxtOffset = new System.Drawing.Point(0, 0);
+            this.tabShow.ImgTxtSpace = 0;
+            this.tabShow.ItemSize = new System.Drawing.Size(73, 70);
+            this.tabShow.Location = new System.Drawing.Point(4, 26);
+            this.tabShow.Margin = new System.Windows.Forms.Padding(0);
+            this.tabShow.Name = "tabShow";
+            this.tabShow.Padding = new System.Drawing.Point(0, 0);
+            this.tabShow.PageArrowDown = ((System.Drawing.Image)(resources.GetObject("tabShow.PageArrowDown")));
+            this.tabShow.PageArrowHover = ((System.Drawing.Image)(resources.GetObject("tabShow.PageArrowHover")));
+            this.tabShow.PageCloseHover = ((System.Drawing.Image)(resources.GetObject("tabShow.PageCloseHover")));
+            this.tabShow.PageCloseNormal = ((System.Drawing.Image)(resources.GetObject("tabShow.PageCloseNormal")));
+            this.tabShow.PageDown = ((System.Drawing.Image)(resources.GetObject("tabShow.PageDown")));
+            this.tabShow.PageHover = ((System.Drawing.Image)(resources.GetObject("tabShow.PageHover")));
+            this.tabShow.PageImagePosition = CCWin.SkinControl.SkinTabControl.ePageImagePosition.Top;
+            this.tabShow.PageNorml = null;
+            this.tabShow.PageTextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.tabShow.SelectedIndex = 0;
+            this.tabShow.Size = new System.Drawing.Size(982, 73);
+            this.tabShow.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.tabShow.TabIndex = 140;
+            this.tabShow.SelectedIndexChanged += new System.EventHandler(this.tabShow_SelectedIndexChanged);
             // 
             // FrmMain
             // 
@@ -1099,15 +1140,6 @@ namespace LCSClientApplication
             this.Text = "销售系统v1";
             this.TitleColor = System.Drawing.Color.White;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.tabShow.ResumeLayout(false);
-            this.tabPageEx6.ResumeLayout(false);
-            this.tabPageEx6.PerformLayout();
-            this.skinTabPage1.ResumeLayout(false);
-            this.skinTabPage1.PerformLayout();
-            this.skinTabPage2.ResumeLayout(false);
-            this.skinTabPage2.PerformLayout();
-            this.skinTabPage3.ResumeLayout(false);
-            this.skinTabPage3.PerformLayout();
             this.skinPanel2.ResumeLayout(false);
             this.skinPanel2.PerformLayout();
             this.skinPanel3.ResumeLayout(false);
@@ -1121,6 +1153,19 @@ namespace LCSClientApplication
             this.skinTabPage8.ResumeLayout(false);
             this.skinTabPage9.ResumeLayout(false);
             this.skinTabPage9.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.skinTabPage3.ResumeLayout(false);
+            this.skinTabPage3.PerformLayout();
+            this.skinTabPage2.ResumeLayout(false);
+            this.skinTabPage2.PerformLayout();
+            this.skinTabPage1.ResumeLayout(false);
+            this.skinTabPage1.PerformLayout();
+            this.tabPageEx6.ResumeLayout(false);
+            this.tabPageEx6.PerformLayout();
+            this.tabShow.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1128,16 +1173,6 @@ namespace LCSClientApplication
         #endregion
 
         private System.Windows.Forms.ImageList imageList;
-        private CCWin.SkinControl.SkinTabControl tabShow;
-        private CCWin.SkinControl.SkinTabPage tabPageEx5;
-        private CCWin.SkinControl.SkinTabPage tabPageEx6;
-        private CCWin.SkinControl.SkinLabel skinLabel26;
-        private CCWin.SkinControl.SkinTabPage skinTabPage1;
-        private CCWin.SkinControl.SkinLabel skinLabel2;
-        private CCWin.SkinControl.SkinTabPage skinTabPage2;
-        private CCWin.SkinControl.SkinLabel skinLabel3;
-        private CCWin.SkinControl.SkinTabPage skinTabPage3;
-        private CCWin.SkinControl.SkinLabel skinLabel4;
         private CCWin.SkinControl.SkinPanel skinPanel2;
         private CCWin.SkinControl.SkinLabel skinLabel8;
         private CCWin.SkinControl.SkinLabel skinLabel9;
@@ -1186,6 +1221,20 @@ namespace LCSClientApplication
         private CCWin.SkinControl.SkinPanel skinPanel3;
         private CCWin.SkinControl.SkinLabel timeLab;
         private CCWin.SkinControl.SkinButton skinButton10;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
+        private CCWin.SkinControl.SkinTabPage tabPageEx5;
+        private CCWin.SkinControl.SkinTabPage skinTabPage3;
+        private CCWin.SkinControl.SkinLabel skinLabel4;
+        private CCWin.SkinControl.SkinTabPage skinTabPage2;
+        private CCWin.SkinControl.SkinLabel skinLabel3;
+        private CCWin.SkinControl.SkinTabPage skinTabPage1;
+        private CCWin.SkinControl.SkinLabel skinLabel2;
+        private CCWin.SkinControl.SkinTabPage tabPageEx6;
+        private CCWin.SkinControl.SkinLabel skinLabel26;
+        private CCWin.SkinControl.SkinTabControl tabShow;
     }
 }
 
