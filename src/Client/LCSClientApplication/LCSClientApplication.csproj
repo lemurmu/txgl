@@ -226,6 +226,7 @@
   <ItemGroup>
     <Content Include="favicon.ico" />
     <Content Include="tubiao\db.jpg" />
+    <Content Include="tubiao\产品管理.png" />
     <Content Include="tubiao\产品资料.png" />
     <Content Include="tubiao\基础资料.png" />
     <Content Include="tubiao\库存查询.png" />

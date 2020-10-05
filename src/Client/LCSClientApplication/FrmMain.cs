@@ -90,22 +90,6 @@ namespace LCSClientApplication
             ShowProductMannage();
         }
 
-        private void tabShow_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            switch (tabShow.SelectedIndex)
-            {
-                case 1:
-                    ShowProductMannage();
-                    break;
-                case 2:
-                    FrmExcelImportGuid frmGuid1 = new FrmExcelImportGuid();
-                    frmGuid1.Show();
-                    break;
-                default:
-                    break;
-            }
-        }
-
         void ShowProductMannage()
         {
             if (frmProductManage==null||frmProductManage.IsDisposed)
@@ -114,6 +98,22 @@ namespace LCSClientApplication
             }
             frmProductManage.Icon = this.Icon;
             frmProductManage.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ShowProductMannage();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FrmExcelImportGuid frmGuid1 = new FrmExcelImportGuid();
+            frmGuid1.Show();
         }
     }
 }

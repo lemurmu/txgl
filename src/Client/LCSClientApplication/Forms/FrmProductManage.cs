@@ -196,7 +196,7 @@ namespace LCSClientApplication.Forms
             string quetyStr = query_txt.Text;
             if (quetyStr.IsNullOrEmpty())
             {
-                MessageBox.Show("查询条件为空！");
+                // MessageBox.Show("查询条件为空！");
                 return;
             }
             try
